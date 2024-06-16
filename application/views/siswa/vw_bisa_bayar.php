@@ -5,7 +5,6 @@
 
 <div class="content-wrapper">
     <div class="container-full">
-        <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="d-flex align-items-center">
                 <div class="me-auto">
@@ -23,7 +22,6 @@
             </div>
         </div>
 
-        <!-- Main content -->
         <section class="content">
             <div class="row">
                 <div class="col-12">
@@ -34,10 +32,8 @@
                         </div>
 
                         <div class="box-body">
-                            <!-- <form action="" method="POST" enctype="multipart/form-data">  -->
-
                             <!-- Default Dokumentasi dari github -->
-                            <form id="payment-form" method="post" action="<?= site_url() ?>/Pembayaran/finish">
+                            <form id="payment-form" method="post" action="<?= site_url('Pembayaran/finish') ?>">
                                 <input type="hidden" name="result_type" id="result-type" value="">
                                 <input type="hidden" name="result_data" id="result-data" value="">
                             </form>
@@ -45,27 +41,87 @@
 
                             <div class="form-group">
                                 <label for="nama_siswa">Nama Siswa</label>
-                                <input type="text" name="nama_siswa" value="<?= set_value('nama_siswa') ?>" class="form-control" id="nama_siswa" placeholder="Nama Siswa">
-                                <?= form_error('nama_siswa', '<small class="text-danger p1-3">', '</small>'); ?>
+                                <input type="text" name="nama_siswa" value="<?= $user['nama'] ?>" class="form-control" id="nama_siswa" placeholder="Nama Siswa" disabled>
                             </div>
 
                             <div class="form-group">
                                 <label for="jmlbayar">Jumlah Bayar</label>
-                                <input type="text" name="jmlbayar" value="<?= set_value('jmlbayar') ?>" class="form-control" id="jmlbayar" placeholder="Jumlah Bayar">
-                                <?= form_error('jmlbayar', '<small class="text-danger p1-3">', '</small>'); ?>
+                                <input type="number" name="jmlbayar" value="<?= set_value('jmlbayar') ?>" class="form-control" id="jmlbayar" placeholder="Jumlah Bayar">
                             </div>
 
-                            <button id="pay-button" class="btn btn-success pull-right">Bayar</button>
-                            <!-- <button type="submit" name="tambah" class="btn btn-success pull-right">Tambah Pengajar</button> -->
+                            <?php foreach ($bayar as $ba) : ?>
+                                <?php if (empty($ba['gross_amount'])) : ?>
+                                    <button id="pay-button" class="btn btn-success pull-right">Bayar</button>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+
                             </Form>
                         </div>
                     </div>
-                    <!-- /.box -->
                 </div>
             </div>
-            <!-- /.row -->
         </section>
-        <!-- /.content -->
+
+        <?php foreach ($bayar as $ba) : ?>
+            <?php if (isset($ba['gross_amount'])) : ?>
+                <section class="content">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="box">
+                                <div class="box-body">
+                                    <?= $this->session->flashdata('message'); ?>
+                                    <div class="table-responsive">
+                                        <table id="example1" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nama</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Payment Type</th>
+                                                    <th>Bank</th>
+                                                    <th>Va Number</th>
+                                                    <th>Transaction Time</th>
+                                                    <th>Status</th>
+                                                    <th>Aksi</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <?php foreach ($bayar as $ba) : ?>
+                                                    <tr>
+                                                        <td><?= $ba['nama']; ?></td>
+                                                        <td><?= $ba['gross_amount']; ?></td>
+                                                        <td><?= $ba['payment_type']; ?></td>
+                                                        <td><?= $ba['bank']; ?></td>
+                                                        <td><?= $ba['va_number']; ?></td>
+                                                        <td><?= $ba['transaction_time']; ?></td>
+                                                        <td>
+                                                            <?php
+                                                            if ($ba['status_code'] == "200") {
+                                                            ?>
+                                                                <span class="badge bg-success">Success</span>
+                                                            <?php
+                                                            } else {
+                                                            ?>
+                                                                <span class="badge bg-warning">Pending</span>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                        <td>
+                                                            <a href="<?= $ba['pdf_url']; ?>" target="_blank" class="btn btn-success btn-sm">Download</a>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </div>
 </div>
 

@@ -162,7 +162,7 @@
                                 </li>
 
                                 <li class="treeview">
-                                <li><a href="<?= base_url('#') ?>">
+                                <li><a href="<?= base_url('Pembayaran_daftar') ?>">
                                         <i class="glyphicon glyphicon-edit"></i>
                                         <span>Daftar</span>
                                     </a></li>

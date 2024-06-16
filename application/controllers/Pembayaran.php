@@ -13,12 +13,14 @@ class Pembayaran extends CI_Controller
         $this->load->library('midtrans');
         $this->midtrans->config($params);
         $this->load->helper('url');
+        $this->load->model('Pembayaran_model');
     }
 
     function index()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $id = $data['user']['id'];
+        $data['bayar'] = $this->Pembayaran_model->get($id);
 
         $cekStatus = $this->Pendaftaran_model->getUser($id);
         if (($cekStatus['status'] === "DITERIMA")) {
@@ -103,7 +105,7 @@ class Pembayaran extends CI_Controller
         $time = time();
         $custom_expiry = array(
             'start_time' => date("Y-m-d H:i:s O", $time),
-            'unit' => 'day',
+            'unit' => 'minute',
             'duration'  => 3
         );
 
@@ -123,9 +125,28 @@ class Pembayaran extends CI_Controller
 
     public function finish()
     {
-        $result = json_decode($this->input->post('result_data'));
-        echo 'RESULT <br><pre>';
-        var_dump($result);
-        echo '</pre>';
+        $result = json_decode($this->input->post('result_data'), true);
+        // echo 'RESULT <br><pre>';
+        // var_dump($result);
+        // echo '</pre>';
+        $data = [
+            'order_id' => $result['order_id'],
+            'gross_amount' => $result['gross_amount'],
+            'payment_type' => $result['payment_type'],
+            'transaction_time' => $result['transaction_time'],
+            'bank' => $result['va_numbers'][0]["bank"],
+            'va_number' => $result['va_numbers'][0]["va_number"],
+            'pdf_url' => $result['pdf_url'],
+            'status_code' => $result['status_code']
+        ];
+        $user['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $id = $user['user']['id'];
+        $simpan = $this->Pembayaran_model->update(['id' => $id], $data);
+        if ($simpan) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Ditambah!</div>');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Data Gagal Ditambah!</div>');
+        }
+        redirect('Pembayaran');
     }
 }
