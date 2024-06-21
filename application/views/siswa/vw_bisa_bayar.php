@@ -46,7 +46,7 @@
 
                             <div class="form-group">
                                 <label for="jmlbayar">Jumlah Bayar</label>
-                                <input type="number" name="jmlbayar" value="<?= set_value('jmlbayar') ?>" class="form-control" id="jmlbayar" placeholder="Jumlah Bayar">
+                                <input type="number" name="jmlbayar" value="<?= $biaya ?>" class="form-control" id="jmlbayar" placeholder="Jumlah Bayar" disabled>
                             </div>
 
                             <?php foreach ($bayar as $ba) : ?>

@@ -15,6 +15,7 @@ class Pembayaran_model extends CI_Model
         $this->db->from('pembayaran p, user u');
         $this->db->where('p.id = u.id');
         $this->db->where('u.role', 'User');
+        // $this->db->where('p.gross_amount IS NOT NULL');
         if ($id) {
             $this->db->where('p.id', $id);
         }
@@ -56,5 +57,15 @@ class Pembayaran_model extends CI_Model
         $this->db->where('p.id', $id);
         $query = $this->db->get();
         return $query->row_array();
+    }
+
+    public function getSiswa()
+    {
+        $this->db->select('p.*, u.nama');
+        $this->db->from('pembayaran p, user u');
+        $this->db->where('p.id = u.id');
+        $this->db->where('u.role', 'User');
+        $query = $this->db->get()->result_array();
+        return $query;
     }
 }

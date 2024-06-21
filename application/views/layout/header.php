@@ -13,6 +13,8 @@
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>main/css/vendors_css.css">
+    <script src="https://cdn.lordicon.com/lordicon-1.2.0.js"></script>
+
 
     <!-- Style-->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>main/css/style.css">
@@ -186,6 +188,13 @@
                                 <li><a href="<?= base_url('#') ?>">
                                         <i class="glyphicon glyphicon-align-justify"></i>
                                         <span>Final Exam</span>
+                                    </a></li>
+                                </li>
+
+                                <li class="treeview">
+                                <li><a href="<?= base_url('Detail_biaya') ?>">
+                                        <i class="glyphicon glyphicon-usd"></i>
+                                        <span>Detail Biaya</span>
                                     </a></li>
                                 </li>
 

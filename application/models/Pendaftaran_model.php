@@ -63,4 +63,51 @@ class Pendaftaran_model extends CI_Model
         $query = $this->db->get();
         return $query->row_array();
     }
+
+    public function jumlahPendaftar()
+    {
+        $this->db->from($this->table);
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function jumlahLaki()
+    {
+        $this->db->from('pendaftaran p');
+        $this->db->where('p.jenis_kelamin', 'Laki-laki');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function jumlahPerempuan()
+    {
+        $this->db->from('pendaftaran p');
+        $this->db->where('p.jenis_kelamin', 'Perempuan');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function jumlahDiproses()
+    {
+        $this->db->from('pendaftaran p');
+        $this->db->where('p.status', 'DIPROSES');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function jumlahDiterima()
+    {
+        $this->db->from('pendaftaran p');
+        $this->db->where('p.status', 'DITERIMA');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function jumlahDitolak()
+    {
+        $this->db->from('pendaftaran p');
+        $this->db->where('p.status', 'DITOLAK');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
 }

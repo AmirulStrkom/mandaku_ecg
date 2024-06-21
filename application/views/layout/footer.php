@@ -37,6 +37,52 @@
 <!-- <script src="<?= base_url('assets/') ?>assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script> -->
 <script src="<?= base_url('assets/') ?>main/js/pages/editor.js"></script>
 
+<!-- Chart -->
+<script src="<?= base_url('assets/') ?>assets/vendor_components/chart.js-master/Chart.min.js"></script>
+<script src="<?= base_url('assets/') ?>main/js/pages/widget-charts2.js"></script>
+
+
+<script type="text/javascript">
+    if (document.getElementById('chartJenis')) {
+        var ctx6 = document.getElementById("chartJenis").getContext("2d");
+        var data6 = {
+            labels: ["Laki-laki", "Perempuan"],
+            datasets: [{
+                data: [<?= $laki ?>, <?= $perempuan ?>],
+                backgroundColor: ["#689f38", "#38649f"],
+                hoverBackgroundColor: ["#33691e", "#244674"]
+            }]
+        };
+
+        var pieChart = new Chart(ctx6, {
+            type: 'pie',
+            data: data6,
+            options: {
+                animation: {
+                    duration: 3000
+                },
+                responsive: true,
+                legend: {
+                    labels: {
+                        fontFamily: "Nunito Sans",
+                        fontColor: "#878787"
+                    }
+                },
+                tooltips: {
+                    backgroundColor: 'rgba(33,33,33,1)',
+                    cornerRadius: 0,
+                    footerFontFamily: "'Nunito Sans'"
+                },
+                elements: {
+                    arc: {
+                        borderWidth: 0
+                    }
+                }
+            }
+        });
+    }
+</script>
+
 </body>
 
 </html>

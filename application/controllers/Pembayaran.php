@@ -14,6 +14,7 @@ class Pembayaran extends CI_Controller
         $this->midtrans->config($params);
         $this->load->helper('url');
         $this->load->model('Pembayaran_model');
+        $this->load->model('Biaya_model');
     }
 
     function index()
@@ -21,6 +22,7 @@ class Pembayaran extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $id = $data['user']['id'];
         $data['bayar'] = $this->Pembayaran_model->get($id);
+        $data['biaya'] = $this->Biaya_model->getTotalBiaya();
 
         $cekStatus = $this->Pendaftaran_model->getUser($id);
         if (($cekStatus['status'] === "DITERIMA")) {

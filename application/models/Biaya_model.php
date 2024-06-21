@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pengajar_model extends CI_Model
+class Biaya_model extends CI_Model
 {
-    public $table = 'pengajar';
-    public $id = 'pengajar.id';
+    public $table = 'detail_biaya';
+    public $id = 'detail_biaya.id_biaya';
     public function __construct()
     {
         parent::__construct();
@@ -42,10 +42,11 @@ class Pengajar_model extends CI_Model
         return $this->db->affected_rows();
     }
 
-    public function jumlahPengajar()
+    public function getTotalBiaya()
     {
-        $this->db->from($this->table);
+        $this->db->select('SUM(db.harga) as total_biaya');
+        $this->db->from('detail_biaya db');
         $query = $this->db->get();
-        return $query->num_rows();
+        return $query->row()->total_biaya;
     }
 }
