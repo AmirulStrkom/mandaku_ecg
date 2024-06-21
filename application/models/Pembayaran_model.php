@@ -68,4 +68,20 @@ class Pembayaran_model extends CI_Model
         $query = $this->db->get()->result_array();
         return $query;
     }
+
+    public function jumlahBerhasil()
+    {
+        $this->db->from('pembayaran p');
+        $this->db->where('p.gross_amount IS NOT NULL');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function jumlahDiproses()
+    {
+        $this->db->from('pembayaran p');
+        $this->db->where('p.gross_amount IS NULL');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
 }

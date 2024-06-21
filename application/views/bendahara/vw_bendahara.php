@@ -1,29 +1,61 @@
-<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <div class="container-full">
-        <!-- Main content -->
-        <section class="content"><br><br>
-            <div class="row align-items-end justify-content-center">
-                <div class="col-xl-9 col-12">
-                    <h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
-                    <div class="box bg-primary-light pull-up">
-                        <div class="box-body p-xl-0">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-lg-3"><img src="<?= base_url('assets/') ?>images/svg-icon/color-svg/custom-14.svg" alt=""></div>
-                                <div class="col-12 col-lg-9">
-                                    <h2>Hello Bendahara, Welcome Back!</h2>
-                                    <p class="text-dark mb-0 fs-16">
-                                        Your course Overcoming the fear of public speaking was completed by 11 New users this week!
-                                    </p>
+        <section class="content">
+            <br><br>
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <h4 class="box-title" style="color: #5c5c3d;">Jumlah Pendaftar</h4>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $pendaftar ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <lord-icon src="https://cdn.lordicon.com/ywahpqkg.json" trigger="hover" colors="primary:#000000,secondary:#f4c89c,tertiary:#913710" style="width:55px;height:55px">
+                                        </lord-icon>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <h4 class="box-title" style="color:  #00b8e6;">Pembayaran Diproses</h4>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $diproses ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <lord-icon src="https://cdn.lordicon.com/afixdwmd.json" trigger="loop" state="loop-cycle" style="width:40px;height:40px"></lord-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <h4 class="box-title" style="color: #00b300;">Pembayaran Berhasil</h4>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $berhasil ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <lord-icon src="https://cdn.lordicon.com/guqkthkk.json" trigger="hover" style="width:40px;height:40px"></lord-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
-
-        <!-- /.content -->
     </div>
 </div>
-<!-- /.content-wrapper -->
