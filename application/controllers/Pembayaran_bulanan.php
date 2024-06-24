@@ -61,4 +61,22 @@ class Pembayaran_bulanan extends CI_Controller
             redirect('Pembayaran_bulanan');
         }
     }
+
+    function midleexam()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['midle'] = $this->Pembayaran_bulanan_model->get();
+        $this->load->view('layout/header', $data);
+        $this->load->view('bendahara/vw_bayar_midleexam', $data);
+        $this->load->view('layout/footer');
+    }
+
+    function finalexam()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['final'] = $this->Pembayaran_bulanan_model->get();
+        $this->load->view('layout/header', $data);
+        $this->load->view('bendahara/vw_bayar_finalexam', $data);
+        $this->load->view('layout/footer');
+    }
 }

@@ -85,6 +85,7 @@
                                             <th>Bank</th>
                                             <th>Va Number</th>
                                             <th>Transaction Time</th>
+                                            <th>Jenis Pembayaran</th>
                                             <th>Status</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -99,6 +100,7 @@
                                                 <td><?= $ba['bank']; ?></td>
                                                 <td><?= $ba['va_number']; ?></td>
                                                 <td><?= date('d F Y', strtotime($ba['transaction_time'])); ?></td>
+                                                <td><?= $ba['jenis_pembayaran']; ?></td>
                                                 <td>
                                                     <?php
                                                     if ($ba['status_code'] == "Berhasil") {

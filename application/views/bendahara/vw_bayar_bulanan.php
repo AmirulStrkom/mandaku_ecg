@@ -23,6 +23,7 @@
                                             <th>Nama</th>
                                             <th>Jumlah</th>
                                             <th>Tipe pembayaran</th>
+                                            <th>Jenis Pembayaran</th>
                                             <th>Waktu Transaksi</th>
                                             <th>Status</th>
                                             <th>Aksi</th>
@@ -38,6 +39,7 @@
                                                 <td><?= $bulan['nama']; ?></td>
                                                 <td><?= $bulan['gross_amount']; ?></td>
                                                 <td><?= $bulan['payment_type']; ?></td>
+                                                <td><?= $bulan['jenis_pembayaran']; ?></td>
                                                 <td><?= date('d F Y', strtotime($bulan['transaction_time'])); ?></td>
                                                 <td>
                                                     <?php
@@ -53,7 +55,7 @@
                                                     ?>
                                                 </td>
                                                 <td>
-                                                    <a href="<?= base_url('Pembayaran_bulanan/tambah/') . $bulan['id_bayar']; ?>" class="glyphicon glyphicon-edit"> Edit</a><br>
+                                                    <a href="<?= base_url('Pembayaran_bulanan/tambah/') . $bulan['id_bayar']; ?>" class="glyphicon glyphicon-edit"> Edit</a>
                                                     <a href="<?= base_url('Pembayaran_bulanan/hapus/') . $bulan['id_bayar']; ?>" class="glyphicon glyphicon-trash"> Hapus</a>
                                                 </td>
                                             </tr>

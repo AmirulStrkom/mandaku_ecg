@@ -99,4 +99,28 @@ class Pembayaran_bulanan_model extends CI_Model
         }
         return null;
     }
+
+    public function jumlahMidle()
+    {
+        $this->db->from('pembayaran_bulanan p');
+        $this->db->where('p.jenis_pembayaran', 'Midle Exam');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function jumlahFinal()
+    {
+        $this->db->from('pembayaran_bulanan p');
+        $this->db->where('p.jenis_pembayaran', 'Final Exam');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function jumlahBulanan()
+    {
+        $this->db->from('pembayaran_bulanan p');
+        $this->db->where('p.jenis_pembayaran', 'Bulanan');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
 }

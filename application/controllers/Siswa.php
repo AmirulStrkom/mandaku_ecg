@@ -9,6 +9,8 @@ class Siswa extends CI_Controller
         is_logged_in2();
         $this->load->model('User_model', 'userrole');
         $this->load->model('Pendaftaran_model');
+        $this->load->model('Persyaratan_model');
+        $this->load->model('Pembayaran_model');
         $this->load->model('Info_pendaftaran_model');
     }
 
@@ -20,6 +22,9 @@ class Siswa extends CI_Controller
 
         $id = $data['user']['id'];
         $data['status'] = $this->Pendaftaran_model->getUser($id);
+        $data['daftar'] = $this->Pendaftaran_model->getUser($id);
+        $data['syarat'] = $this->Persyaratan_model->getUser($id);
+        $data['bayar'] = $this->Pembayaran_model->getUser($id);
 
         $this->load->view('layout/header', $data);
         $this->load->view('siswa/vw_siswa', $data);

@@ -71,19 +71,32 @@
                 <?php endif; ?>
             </div><br>
 
-            <h2>Batas Waktu Administrasi</h2>
+            <h2>Informasi Administrasi Anda</h2>
             <div class="box">
+
                 <div class="box-header no-border">
-                    <h4 class="box-title text-left" style="color: red;"><i class="glyphicon glyphicon-remove"></i> Mohon maaf anda belum melakukan pendaftaran, Silahkan klik menu daftar untuk melakukan pendaftaran!</h4>
-                    <h4 class="box-title text-left" style="color: green;"><i class="glyphicon glyphicon-ok"></i> Pendaftaran Berhasil</h4>
+                    <?php if (isset($daftar['asal_sekolah'])) : ?>
+                        <h4 class="box-title text-left" style="color: green;"><i class="glyphicon glyphicon-ok"></i> Pendaftaran Berhasil</h4>
+                    <?php else : ?>
+                        <h4 class="box-title text-left" style="color: red;"><i class="glyphicon glyphicon-remove"></i> Mohon maaf anda belum melakukan pendaftaran, Silahkan klik menu daftar untuk melakukan pendaftaran!</h4>
+                    <?php endif; ?>
                 </div>
+
                 <div class="box-header border">
-                    <h4 class="box-title text-left" style="color: red;"><i class="glyphicon glyphicon-remove"></i> Mohon maaf anda belum melengkapi persyaratan, Silahkan klik menu syarat untuk melengkapi persyaratan!</h4>
-                    <h4 class="box-title text-left" style="color: green;"><i class="glyphicon glyphicon-ok"></i> Persyaratan Sudah di Upload</h4>
+                    <?php if (isset($syarat['kartu_pelajar'])) : ?>
+                        <h4 class="box-title text-left" style="color: green;"><i class="glyphicon glyphicon-ok"></i> Persyaratan Sudah di Upload</h4>
+                    <?php else : ?>
+                        <h4 class="box-title text-left" style="color: red;"><i class="glyphicon glyphicon-remove"></i> Mohon maaf anda belum melengkapi persyaratan, Silahkan klik menu syarat untuk melengkapi persyaratan!</h4>
+                    <?php endif; ?>
                 </div>
+
                 <div class="box-header border">
-                    <h4 class="box-title text-left" style="color: red;"><i class="glyphicon glyphicon-remove"></i> Mohon maaf anda belum melakukan pembayaran, Silahkan klik menu bayar untuk melakukan pembayaran!</h4>
-                    <h4 class="box-title text-left" style="color: green;"><i class="glyphicon glyphicon-ok"></i> Pembayaran Berhasil</h4>
+                    <?php if (isset($bayar['gross_amount'])) : ?>
+                        <h4 class="box-title text-left" style="color: green;"><i class="glyphicon glyphicon-ok"></i> Pembayaran Berhasil</h4>
+                    <?php else : ?>
+                        <h4 class="box-title text-left" style="color: red;"><i class="glyphicon glyphicon-remove"></i> Mohon maaf anda belum melakukan pembayaran, Silahkan klik menu bayar untuk melakukan pembayaran!</h4>
+                    <?php endif; ?>
+
                 </div>
             </div><br>
 

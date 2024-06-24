@@ -178,14 +178,14 @@
                                 </li>
 
                                 <li class="treeview">
-                                <li><a href="<?= base_url('#') ?>">
+                                <li><a href="<?= base_url('Pembayaran_bulanan/midleexam') ?>">
                                         <i class="glyphicon glyphicon-align-center"></i>
                                         <span>Midle Exam</span>
                                     </a></li>
                                 </li>
 
                                 <li class="treeview">
-                                <li><a href="<?= base_url('#') ?>">
+                                <li><a href="<?= base_url('Pembayaran_bulanan/finalexam') ?>">
                                         <i class="glyphicon glyphicon-align-justify"></i>
                                         <span>Final Exam</span>
                                     </a></li>
