@@ -171,7 +171,7 @@
                                 </li>
 
                                 <li class="treeview">
-                                <li><a href="<?= base_url('#') ?>">
+                                <li><a href="<?= base_url('Pembayaran_bulanan') ?>">
                                         <i class="glyphicon glyphicon-pencil"></i>
                                         <span>Bulanan</span>
                                     </a></li>
@@ -195,6 +195,13 @@
                                 <li><a href="<?= base_url('Detail_biaya') ?>">
                                         <i class="glyphicon glyphicon-usd"></i>
                                         <span>Detail Biaya</span>
+                                    </a></li>
+                                </li>
+
+                                <li class="treeview">
+                                <li><a href="<?= base_url('Detail_bulanan') ?>">
+                                        <i class="glyphicon glyphicon-usd"></i>
+                                        <span>Detail Bulanan</span>
                                     </a></li>
                                 </li>
 
@@ -240,6 +247,13 @@
                                 <li><a href="<?= base_url('Pembayaran') ?>">
                                         <i class="fa fa-money"></i>
                                         <span>Bayar</span>
+                                    </a></li>
+                                </li>
+
+                                <li class="treeview">
+                                <li><a href="<?= base_url('Pembayaran_lain') ?>">
+                                        <i class="fa fa-dollar"></i>
+                                        <span>Pembayaran Lain</span>
                                     </a></li>
                                 </li>
 

@@ -10,6 +10,7 @@ class Auth extends CI_Controller
         $this->load->model('Pendaftaran_model');
         $this->load->model('Persyaratan_model'); //new
         $this->load->model('Pembayaran_model'); //new
+        $this->load->model('Pembayaran_bulanan_model'); //new
     }
 
     function index()
@@ -79,6 +80,7 @@ class Auth extends CI_Controller
             $this->Pendaftaran_model->insert($daftar);
             $this->Persyaratan_model->insert($daftar);
             $this->Pembayaran_model->insert($daftar);
+            $this->Pembayaran_bulanan_model->insert($daftar);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat! Akunmu telah berhasil terdaftar, Silahkan Login!</div>');
             redirect('auth');
         }

@@ -29,6 +29,49 @@
                 <?php endforeach ?>
             </div><br>
 
+            <div class="row">
+                <h2><?php echo $judul; ?></h2>
+
+                <?php if ($status['status'] == "DIPROSES") : ?>
+                    <div class="col-12">
+                        <div class="box overflow-hidden pull-up">
+                            <div class="box-body pe-0 ps-lg-50 ps-15 py-0" style="background-color: gray;">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <h3 class="fs-30 text-white text-center">DIPROSES</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php elseif ($status['status'] == "DITERIMA") : ?>
+                    <div class="col-12">
+                        <div class="box overflow-hidden pull-up">
+                            <div class="box-body pe-0 ps-lg-50 ps-15 py-0" style="background-color: green;">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <h3 class="fs-30 text-white text-center">DITERIMA</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php else : ?>
+                    <div class="col-12">
+                        <div class="box overflow-hidden pull-up">
+                            <div class="box-body pe-0 ps-lg-50 ps-15 py-0" style="background-color: red;">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <h3 class="fs-30 text-white text-center">DITOLAK</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div><br>
+
+            <h2>Batas Waktu Administrasi</h2>
             <div class="box">
                 <div class="box-header no-border">
                     <h4 class="box-title text-left" style="color: red;"><i class="glyphicon glyphicon-remove"></i> Mohon maaf anda belum melakukan pendaftaran, Silahkan klik menu daftar untuk melakukan pendaftaran!</h4>
@@ -44,50 +87,6 @@
                 </div>
             </div><br>
 
-            <div class="row">
-                <h2><?php echo $judul; ?></h2>
-
-                <?php foreach ($status as $sta) : ?>
-                    <?php if ($sta['status'] == "DIPROSES") : ?>
-                        <div class="col-12">
-                            <div class="box overflow-hidden pull-up">
-                                <div class="box-body pe-0 ps-lg-50 ps-15 py-0" style="background-color: gray;">
-                                    <div class="row align-items-center">
-                                        <div class="col-12">
-                                            <h3 class="fs-30 text-white text-center">DIPROSES</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php elseif ($sta['status'] == "DITERIMA") : ?>
-                        <div class="col-12">
-                            <div class="box overflow-hidden pull-up">
-                                <div class="box-body pe-0 ps-lg-50 ps-15 py-0" style="background-color: green;">
-                                    <div class="row align-items-center">
-                                        <div class="col-12">
-                                            <h3 class="fs-30 text-white text-center">DITERIMA</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php else : ?>
-                        <div class="col-12">
-                            <div class="box overflow-hidden pull-up">
-                                <div class="box-body pe-0 ps-lg-50 ps-15 py-0" style="background-color: red;">
-                                    <div class="row align-items-center">
-                                        <div class="col-12">
-                                            <h3 class="fs-30 text-white text-center">DITOLAK</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                <?php endforeach; ?>
-
-            </div>
         </section>
 
     </div>

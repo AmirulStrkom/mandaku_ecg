@@ -3,7 +3,7 @@
         <div class="content-header">
             <div class="d-flex align-items-center">
                 <div class="me-auto">
-                    <h3 class="page-title">Halaman Tambah Bayar pendaftaran</h3>
+                    <h3 class="page-title">Halaman Tambah Bayar Bulanan</h3>
                     <div class="d-inline-block align-items-center">
                         <nav>
                             <ol class="breadcrumb">
@@ -22,7 +22,7 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h4 class="box-title">Form Tambah Bayar Pendaftaran</h4>
+                            <h4 class="box-title">Form Tambah Bayar Bulanan</h4>
                         </div>
 
                         <div class="box-body">
@@ -57,12 +57,6 @@
                                     <?= form_error('transaction_time', '<small class="text-danger p1-3">', '</small>'); ?>
                                 </div>
 
-                                <!-- <div class="form-group">
-                                    <label for="status_code">Status</label>
-                                    <input type="text" name="status_code" value="<?= set_value('status_code') ?>" class="form-control" id="status_code" placeholder="Status">
-                                    <?= form_error('status_code', '<small class="text-danger p1-3">', '</small>'); ?>
-                                </div> -->
-
                                 <div class="form-group">
                                     <label for="status_code">Status</label>
                                     <select name="status_code" id="status_code" value="<?= set_value('status_code') ?>" class="form-control">
@@ -73,8 +67,8 @@
                                     <?= form_error('status_code', '<small class="text-danger p1-3">', '</small>'); ?>
                                 </div>
 
-                                <a href="<?= base_url('Pembayaran_daftar') ?>" class="btn btn-danger">Tutup</a>
-                                <button type="submit" name="tambah" class="btn btn-success pull-right">Tambah Pendaftar</button>
+                                <a href="<?= base_url('Pembayaran_bulanan') ?>" class="btn btn-danger">Tutup</a>
+                                <button type="submit" name="tambah" class="btn btn-success pull-right">Tambah Bulanan</button>
                             </Form>
                         </div>
                     </div>

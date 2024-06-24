@@ -18,9 +18,8 @@ class Siswa extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['pendaftaran'] = $this->Info_pendaftaran_model->get();
 
-
         $id = $data['user']['id'];
-        $data['status'] = $this->Pendaftaran_model->get($id);
+        $data['status'] = $this->Pendaftaran_model->getUser($id);
 
         $this->load->view('layout/header', $data);
         $this->load->view('siswa/vw_siswa', $data);

@@ -5,12 +5,12 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Halaman Bayar Pendaftaran</h3>
+                            <h3 class="box-title">Halaman pembayaran Bulanan</h3>
                         </div>
                         <div class="box-body">
 
                             <div class="float-right">
-                                <a href="<?= base_url() ?>Pembayaran_daftar/tambah" class="waves-effect waves-light btn mb-5 bg-gradient-primary">Tambah Pembayaran</a>
+                                <a href="<?= base_url() ?>Pembayaran_bulanan/tambah" class="waves-effect waves-light btn mb-5 bg-gradient-primary">Tambah Bulanan</a>
                             </div><br>
 
                             <?= $this->session->flashdata('message'); ?>
@@ -22,7 +22,7 @@
                                             <th>Id Bayar</th>
                                             <th>Nama</th>
                                             <th>Jumlah</th>
-                                            <th>Tipe Pembayaran</th>
+                                            <th>Tipe pembayaran</th>
                                             <th>Waktu Transaksi</th>
                                             <th>Status</th>
                                             <th>Aksi</th>
@@ -31,17 +31,17 @@
 
                                     <tbody>
                                         <?php $i = 1; ?>
-                                        <?php foreach ($bayar as $ba) : ?>
+                                        <?php foreach ($bulanan as $bulan) : ?>
                                             <tr>
                                                 <td><?= $i; ?>.</td>
-                                                <td><?= $ba['order_id']; ?></td>
-                                                <td><?= $ba['nama']; ?></td>
-                                                <td><?= $ba['gross_amount']; ?></td>
-                                                <td><?= $ba['payment_type']; ?></td>
-                                                <td><?= date('d F Y', strtotime($ba['transaction_time'])); ?></td>
+                                                <td><?= $bulan['order_id']; ?></td>
+                                                <td><?= $bulan['nama']; ?></td>
+                                                <td><?= $bulan['gross_amount']; ?></td>
+                                                <td><?= $bulan['payment_type']; ?></td>
+                                                <td><?= date('d F Y', strtotime($bulan['transaction_time'])); ?></td>
                                                 <td>
                                                     <?php
-                                                    if ($ba['status_code'] == "Berhasil") {
+                                                    if ($bulan['status_code'] == "Berhasil") {
                                                     ?>
                                                         <span class="badge bg-success">Success</span>
                                                     <?php
@@ -53,8 +53,8 @@
                                                     ?>
                                                 </td>
                                                 <td>
-                                                    <a href="<?= base_url('Pembayaran_daftar/tambah/') . $ba['id_bayar']; ?>" class="glyphicon glyphicon-edit"> Edit</a><br>
-                                                    <a href="<?= base_url('Pembayaran_daftar/hapus/') . $ba['id_bayar']; ?>" class="glyphicon glyphicon-trash"> Hapus</a>
+                                                    <a href="<?= base_url('Pembayaran_bulanan/tambah/') . $bulan['id_bayar']; ?>" class="glyphicon glyphicon-edit"> Edit</a><br>
+                                                    <a href="<?= base_url('Pembayaran_bulanan/hapus/') . $bulan['id_bayar']; ?>" class="glyphicon glyphicon-trash"> Hapus</a>
                                                 </td>
                                             </tr>
                                             <?php $i++; ?>

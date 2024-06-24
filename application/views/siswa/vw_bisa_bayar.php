@@ -93,10 +93,10 @@
                                                         <td><?= $ba['payment_type']; ?></td>
                                                         <td><?= $ba['bank']; ?></td>
                                                         <td><?= $ba['va_number']; ?></td>
-                                                        <td><?= $ba['transaction_time']; ?></td>
+                                                        <td><?= date('d F Y', strtotime($ba['transaction_time'])); ?></td>
                                                         <td>
                                                             <?php
-                                                            if ($ba['status_code'] == "200") {
+                                                            if ($ba['status_code'] == "Berhasil") {
                                                             ?>
                                                                 <span class="badge bg-success">Success</span>
                                                             <?php
