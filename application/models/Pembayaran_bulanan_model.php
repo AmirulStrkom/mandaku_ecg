@@ -54,7 +54,7 @@ class Pembayaran_bulanan_model extends CI_Model
         $this->db->select('p.*, u.nama');
         $this->db->from('pembayaran_bulanan p, user u');
         $this->db->where('p.id = u.id');
-        $this->db->where('p.id', $id);
+        $this->db->where('p.id_bayar', $id);
         $query = $this->db->get();
         return $query->row_array();
     }

@@ -53,7 +53,7 @@
                                                     ?>
                                                 </td>
                                                 <td>
-                                                    <a href="<?= base_url('Pembayaran_daftar/tambah/') . $ba['id_bayar']; ?>" class="glyphicon glyphicon-edit"> Edit</a><br>
+                                                    <a href="<?= base_url('Pembayaran_daftar/edit/') . $ba['id_bayar']; ?>" class="glyphicon glyphicon-edit"> Edit</a><br>
                                                     <a href="<?= base_url('Pembayaran_daftar/hapus/') . $ba['id_bayar']; ?>" class="glyphicon glyphicon-trash"> Hapus</a>
                                                 </td>
                                             </tr>

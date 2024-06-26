@@ -19,13 +19,11 @@ class Siswa extends CI_Controller
         $data['judul'] = "Status Pendaftaran Online Anda";
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['pendaftaran'] = $this->Info_pendaftaran_model->get();
-
         $id = $data['user']['id'];
         $data['status'] = $this->Pendaftaran_model->getUser($id);
         $data['daftar'] = $this->Pendaftaran_model->getUser($id);
         $data['syarat'] = $this->Persyaratan_model->getUser($id);
         $data['bayar'] = $this->Pembayaran_model->getUser($id);
-
         $this->load->view('layout/header', $data);
         $this->load->view('siswa/vw_siswa', $data);
         $this->load->view('layout/footer');

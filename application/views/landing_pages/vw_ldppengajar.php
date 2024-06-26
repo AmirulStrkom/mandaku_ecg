@@ -39,9 +39,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /.box -->
                     </div>
-                    <!-- /.col -->
                 <?php endforeach ?>
             </div>
             <!-- /.row -->

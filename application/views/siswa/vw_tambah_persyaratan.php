@@ -64,6 +64,11 @@
                                     <input class="form-control" type="file" name="kartu_keluarga" id="kartu_keluarga">
                                 </div>
 
+                                <div class="mb-3">
+                                    <label for="pas_foto" class="form-label">Pas Foto</label>
+                                    <input class="form-control" type="file" name="pas_foto" id="pas_foto">
+                                </div>
+
                                 <button type="submit" name="tambah" class="btn btn-success pull-right">Upload</button>
                             </Form>
                         </div>

@@ -44,7 +44,8 @@
                                     'surat_kesehatan',
                                     'surat_pernyataan',
                                     'kartu_pelajar',
-                                    'kartu_keluarga'
+                                    'kartu_keluarga',
+                                    'pas_foto'
                                 ];
 
                                 foreach ($files as $file) :
@@ -56,7 +57,9 @@
                                             <?php if ($file_extension === 'pdf') : ?>
                                                 <embed src="<?= base_url('assets/images/persyaratan/') . $syarat[$file]; ?>" type="application/pdf" width="100%" height="100%">
                                             <?php else : ?>
-                                                <img src="<?= base_url('assets/images/persyaratan/') . $syarat[$file]; ?>" style="width: 100%; height: 100%; object-fit: cover;">
+                                                <a href="<?= base_url('assets/images/persyaratan/') . $syarat[$file]; ?>" target="_blank">
+                                                    <img src="<?= base_url('assets/images/persyaratan/') . $syarat[$file]; ?>" style="width: 100%; height: 100%; object-fit: cover;">
+                                                </a>
                                             <?php endif; ?>
                                         </div>
                                     </div>

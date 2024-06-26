@@ -10,7 +10,7 @@
                         <div class="box-body">
 
                             <div class="float-right">
-                                <a href="<?= base_url() ?>Pembayaran_bulanan/tambah" class="waves-effect waves-light btn mb-5 bg-gradient-primary">Tambah Bulanan</a>
+                                <a href="<?= base_url() ?>Pembayaran_bulanan/tambah" class="waves-effect waves-light btn mb-5 bg-gradient-primary">Tambah Pembayaran</a>
                             </div><br>
 
                             <?= $this->session->flashdata('message'); ?>
@@ -55,7 +55,7 @@
                                                     ?>
                                                 </td>
                                                 <td>
-                                                    <a href="<?= base_url('Pembayaran_bulanan/tambah/') . $bulan['id_bayar']; ?>" class="glyphicon glyphicon-edit"> Edit</a>
+                                                    <a href="<?= base_url('Pembayaran_bulanan/edit/') . $bulan['id_bayar']; ?>" class="glyphicon glyphicon-edit"> Edit</a>
                                                     <a href="<?= base_url('Pembayaran_bulanan/hapus/') . $bulan['id_bayar']; ?>" class="glyphicon glyphicon-trash"> Hapus</a>
                                                 </td>
                                             </tr>

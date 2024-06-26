@@ -60,14 +60,14 @@
                             <a href="#" class="waves-effect waves-light dropdown-toggle" data-bs-toggle="dropdown" title="User">
                                 <i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
                             </a>
-                            <ul class="dropdown-menu animated flipInX">
+                            <!-- <ul class="dropdown-menu animated flipInX">
                                 <li class="user-body">
                                     <a class="dropdown-item" href="#"><i class="ti-user text-muted me-2"></i> Profile</a>
                                     <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Settings</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="<?= base_url('auth/logout'); ?>"><i class="ti-lock text-muted me-2"></i> Logout</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </li>
 
                         <li class="btn-group nav-item d-lg-inline-flex d-none">
@@ -200,7 +200,7 @@
 
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Detail_bulanan') ?>">
-                                        <i class="glyphicon glyphicon-usd"></i>
+                                        <i class="fa fa-dollar"></i>
                                         <span>Detail Bulanan</span>
                                     </a></li>
                                 </li>
@@ -271,9 +271,9 @@
                 </div>
             </section>
 
-            <div class="sidebar-footer">
+            <!-- <div class="sidebar-footer">
                 <a href="<?= base_url('assets/') ?>javascript:void(0)" class="link" data-bs-toggle="tooltip" title="Settings"><span class="icon-Settings-2"></span></a>
                 <a href="<?= base_url('assets/') ?>mailbox.html" class="link" data-bs-toggle="tooltip" title="Email"><span class="icon-Mail"></span></a>
                 <a href="<?= base_url('assets/') ?>javascript:void(0)" class="link" data-bs-toggle="tooltip" title="Logout"><span class="icon-Lock-overturning"><span class="path1"></span><span class="path2"></span></span></a>
-            </div>
+            </div> -->
         </aside>

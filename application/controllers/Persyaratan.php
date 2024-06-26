@@ -38,7 +38,7 @@ class Persyaratan extends CI_Controller
     public function tambah()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $files = ['surat_izin_sekolah', 'surat_pernyataan', 'surat_kesehatan', 'kartu_pelajar', 'kartu_keluarga'];
+        $files = ['surat_izin_sekolah', 'surat_pernyataan', 'surat_kesehatan', 'kartu_pelajar', 'kartu_keluarga', 'pas_foto'];
         $uploaded_files = [];
 
         $config['allowed_types'] = 'gif|jpg|png|jpeg|pdf';

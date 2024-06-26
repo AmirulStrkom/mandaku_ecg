@@ -7,7 +7,7 @@ function is_logged_in() //membatasi akses ke halaman admin
     } else {
         $role = $ci->session->userdata('role');
         if ($role != "Admin") {
-            redirect('Welcome');
+            redirect('Admin');
         }
     }
 }
@@ -19,7 +19,7 @@ function is_logged_in2() //membatasi akses ke halaman user
     } else {
         $role = $ci->session->userdata('role');
         if ($role != "User") {
-            redirect('Welcome');
+            redirect('Siswa');
         }
     }
 }
@@ -31,7 +31,7 @@ function is_logged_in3() //membatasi akses ke halaman Bendahara
     } else {
         $role = $ci->session->userdata('role');
         if ($role != "Bendahara") {
-            redirect('Welcome');
+            redirect('Bendahara');
         }
     }
 }

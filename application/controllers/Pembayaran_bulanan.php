@@ -41,6 +41,7 @@ class Pembayaran_bulanan extends CI_Controller
         $this->form_validation->set_rules('payment_type', 'Tipe Pembayaran', 'required', ['required' => 'Tipe Pembayaran Wajib di Isi']);
         $this->form_validation->set_rules('transaction_time', 'Waktu Transaksi', 'required', ['required' => 'Waktu Transaksi Wajib di Isi']);
         $this->form_validation->set_rules('status_code', 'Status', 'required', ['required' => 'Status Pembayaran Wajib di Isi']);
+        $this->form_validation->set_rules('jenis_pembayaran', 'Status', 'required', ['required' => 'Status Pembayaran Wajib di Isi']);
         $data['biaya'] = $this->Bulanan_model->getTotalBiaya();
         $data['siswa'] = $this->Pembayaran_bulanan_model->getSiswa();
 
@@ -55,8 +56,39 @@ class Pembayaran_bulanan extends CI_Controller
                 'payment_type' => $this->input->post('payment_type'),
                 'transaction_time' => $this->input->post('transaction_time'),
                 'status_code' => $this->input->post('status_code'),
+                'jenis_pembayaran' => $this->input->post('jenis_pembayaran'),
             ];
-            $this->Pembayaran_bulanan_model->update(['id' => $data['id']], $data);
+            $this->Pembayaran_bulanan_model->insert($data);
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Pembayaran Baru Berhasil Ditambah!</div>');
+            redirect('Pembayaran_bulanan');
+        }
+    }
+
+    public function edit($id_bayar)
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $this->form_validation->set_rules('gross_amount', 'Jumlah', 'required', ['required' => 'Jumlah Wajib di Isi']);
+        $this->form_validation->set_rules('payment_type', 'Tipe Pembayaran', 'required', ['required' => 'Tipe Pembayaran Wajib di Isi']);
+        $this->form_validation->set_rules('transaction_time', 'Waktu Transaksi', 'required', ['required' => 'Waktu Transaksi Wajib di Isi']);
+        $this->form_validation->set_rules('status_code', 'Status', 'required', ['required' => 'Status Pembayaran Wajib di Isi']);
+        $this->form_validation->set_rules('jenis_pembayaran', 'Jenis Pembayaran', 'required', ['required' => 'Jenis Pembayaran Wajib di Isi']);
+        $data['biaya'] = $this->Bulanan_model->getTotalBiaya();
+        $data['siswa'] = $this->Pembayaran_bulanan_model->getUser($id_bayar);
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view("layout/header", $data);
+            $this->load->view("bendahara/vw_ubah_bulanan", $data);
+            $this->load->view("layout/footer");
+        } else {
+            $id_bayar =  $this->input->post('id_bayar');
+            $data = [
+                'gross_amount' => $this->input->post('gross_amount'),
+                'payment_type' => $this->input->post('payment_type'),
+                'transaction_time' => $this->input->post('transaction_time'),
+                'status_code' => $this->input->post('status_code'),
+                'jenis_pembayaran' => $this->input->post('jenis_pembayaran'),
+            ];
+            $this->Pembayaran_bulanan_model->update(['id_bayar' => $id_bayar], $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Pembayaran Baru Berhasil Ditambah!</div>');
             redirect('Pembayaran_bulanan');
         }

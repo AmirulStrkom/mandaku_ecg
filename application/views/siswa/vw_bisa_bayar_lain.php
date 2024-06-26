@@ -54,8 +54,8 @@
                                 <select name="jenis_pembayaran" id="jenis_pembayaran" value="<?= set_value('jenis_pembayaran') ?>" class="form-control">
                                     <option value="">Jenis Pembayaran</option>
                                     <option value="Bulanan">Bulanan</option>
-                                    <option value="Midle Examp">Midle Exam</option>
-                                    <option value="Final Examp">Final Exam</option>
+                                    <option value="Midle Exam">Midle Exam</option>
+                                    <option value="Final Exam">Final Exam</option>
                                 </select>
                                 <?= form_error('jenis_pembayaran', '<small class="text-danger p1-3">', '</small>'); ?>
                             </div>

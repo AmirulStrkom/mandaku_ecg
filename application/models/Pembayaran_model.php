@@ -59,6 +59,16 @@ class Pembayaran_model extends CI_Model
         return $query->row_array();
     }
 
+    public function getNama($id)
+    {
+        $this->db->select('p.*, u.nama');
+        $this->db->from('pembayaran p, user u');
+        $this->db->where('p.id = u.id');
+        $this->db->where('p.id_bayar', $id);
+        $query = $this->db->get();
+        return $query->row_array();
+    }
+
     public function getSiswa()
     {
         $this->db->select('p.*, u.nama');
