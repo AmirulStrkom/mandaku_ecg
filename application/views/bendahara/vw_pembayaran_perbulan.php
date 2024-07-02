@@ -3,7 +3,7 @@
         <div class="content-header">
             <div class="d-flex align-items-center">
                 <div class="me-auto">
-                    <h3 class="page-title">Halaman Tambah Biaya Bulanan</h3>
+                    <h3 class="page-title">Halaman Tambah Biaya Bulanan / Ujian</h3>
                     <div class="d-inline-block align-items-center">
                         <nav>
                             <ol class="breadcrumb">
@@ -22,7 +22,7 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h4 class="box-title">Form Tambah Biaya Bulanan</h4>
+                            <h4 class="box-title">Form Tambah Biaya Bulanan dan Ujian</h4>
                         </div>
                         <div class="box-body">
                             <form action="" method="POST" enctype="multipart/form-data">
@@ -40,7 +40,7 @@
                                 </div>
 
                                 <a href="<?= base_url('Detail_bulanan') ?>" class="btn btn-danger">Tutup</a>
-                                <button type="submit" name="tambah" class="btn btn-success pull-right">Tambah Bulanan</button>
+                                <button type="submit" name="tambah" class="btn btn-success pull-right">Tambah</button>
                             </Form>
                         </div>
                     </div>

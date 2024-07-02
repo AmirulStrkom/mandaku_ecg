@@ -4,7 +4,7 @@
         <div class="content-header">
             <div class="d-flex align-items-center">
                 <div class="me-auto">
-                    <h3 class="page-title">Halaman Pendaftaran Siswa Baru</h3>
+                    <h3 class="page-title">Halaman Konfirmasi Pendaftaran Siswa</h3>
                     <div class="d-inline-block align-items-center">
                         <nav>
                             <ol class="breadcrumb">
@@ -25,7 +25,7 @@
                     <div class="box">
 
                         <div class="box-header with-border">
-                            <h4 class="box-title">Isilah Form Pendaftaran Dengan benar</h4>
+                            <h4 class="box-title">Konfirmasi Pendaftaran Siswa Dengan benar</h4>
                         </div>
 
                         <div class="box-body">
@@ -38,7 +38,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="status">Jenis Kelamin</label>
+                                    <label for="status">Status Pendaftaran</label>
                                     <select name="status" id="status" value="<?= set_value('status') ?>" class="form-control">
                                         <option value="">Pilih Status</option>
                                         <option value="DITERIMA">DITERIMA</option>

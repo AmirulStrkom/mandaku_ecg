@@ -5,12 +5,12 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Halaman Detail Biaya Bulanan</h3>
+                            <h3 class="box-title">Halaman Detail Biaya Bulanan / Ujian</h3>
                         </div>
                         <div class="box-body">
 
                             <div class="float-right">
-                                <a href="<?= base_url() ?>Detail_bulanan/tambah" class="waves-effect waves-light btn mb-5 bg-gradient-primary">Tambah Bulanan</a>
+                                <a href="<?= base_url() ?>Detail_bulanan/tambah" class="waves-effect waves-light btn mb-5 bg-gradient-primary">Tambah Detail</a>
                             </div><br>
 
                             <?= $this->session->flashdata('message'); ?>

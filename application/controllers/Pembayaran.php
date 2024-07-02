@@ -107,8 +107,8 @@ class Pembayaran extends CI_Controller
         $time = time();
         $custom_expiry = array(
             'start_time' => date("Y-m-d H:i:s O", $time),
-            'unit' => 'minute',
-            'duration'  => 3
+            'unit' => 'day',
+            'duration'  => 1
         );
 
         $transaction_data = array(

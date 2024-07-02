@@ -49,9 +49,15 @@
                                     <?= form_error('payment_type', '<small class="text-danger p1-3">', '</small>'); ?>
                                 </div>
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="transaction_time">Waktu Transakri</label>
                                     <input type="date" name="transaction_time" class="form-control" id="transaction_time" value="<?= $siswa['transaction_time']; ?>">
+                                    <?= form_error('transaction_time', '<small class="text-danger p1-3">', '</small>'); ?>
+                                </div> -->
+
+                                <div class="form-group">
+                                    <label for="transaction_time">Waktu Transaksi</label>
+                                    <input type="date" name="transaction_time" class="form-control" id="transaction_time" value="<?= substr($siswa['transaction_time'], 0, 10); ?>">
                                     <?= form_error('transaction_time', '<small class="text-danger p1-3">', '</small>'); ?>
                                 </div>
 

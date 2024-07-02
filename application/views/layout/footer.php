@@ -2,11 +2,11 @@
     <div class="pull-right d-none d-sm-inline-block">
         <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('assets/') ?>javascript:void(0)">ECG</a>
+                <!-- <a class="nav-link" href="<?= base_url('assets/') ?>javascript:void(0)"></a> -->
             </li>
         </ul>
     </div>
-    &copy; 2024 <a href="https://www.multipurposethemes.com/">Developh By</a> Amirul.
+    <a style="color: blue;">ECG 2024 Developh By Amirul.</a>
 </footer>
 
 <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->

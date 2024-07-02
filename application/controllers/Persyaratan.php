@@ -67,7 +67,7 @@ class Persyaratan extends CI_Controller
 
         if (!empty($data)) {
             $this->Persyaratan_model->update(['id' => $id], $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Dokumentasi berhasil ditambah!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Persyaratan berhasil diunggah!</div>');
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Ada salah satu file yang belum diunggah!</div>');
         }

@@ -90,8 +90,7 @@
                         <ul class="sidebar-menu" data-widget="tree">
                             <?php
                             if ($user['role'] == 'Admin') { ?>
-                                <li class="header">Menu</li>
-
+                                <li class="header">Dashboard </li>
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Admin') ?>">
                                         <i class="glyphicon glyphicon-th-large"></i>
@@ -99,6 +98,7 @@
                                     </a></li>
                                 </li>
 
+                                <li class="header">Menu</li>
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Daftarsiswa') ?>">
                                         <i class="fa fa-address-book"></i>
@@ -155,7 +155,7 @@
 
                             <?php } elseif ($user['role'] == 'Bendahara') { ?>
 
-                                <li class="header">Menu </li>
+                                <li class="header">Dashboard </li>
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Bendahara') ?>">
                                         <i class="glyphicon glyphicon-th-large"></i>
@@ -163,6 +163,7 @@
                                     </a></li>
                                 </li>
 
+                                <li class="header">Menu </li>
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Pembayaran_daftar') ?>">
                                         <i class="glyphicon glyphicon-edit"></i>
@@ -173,7 +174,7 @@
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Pembayaran_bulanan') ?>">
                                         <i class="glyphicon glyphicon-pencil"></i>
-                                        <span>Bulanan</span>
+                                        <span>Bulanan / Ujian</span>
                                     </a></li>
                                 </li>
 
@@ -194,14 +195,14 @@
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Detail_biaya') ?>">
                                         <i class="glyphicon glyphicon-usd"></i>
-                                        <span>Detail Biaya</span>
+                                        <span>Detail Biaya Daftar</span>
                                     </a></li>
                                 </li>
 
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Detail_bulanan') ?>">
                                         <i class="fa fa-dollar"></i>
-                                        <span>Detail Bulanan</span>
+                                        <span>Detail Bulanan / Ujian</span>
                                     </a></li>
                                 </li>
 
@@ -213,7 +214,7 @@
                                 </li>
                             <?php } else {
                             ?>
-                                <li class="header">Menu</li>
+                                <li class="header">Dashboard</li>
 
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Siswa') ?>">
@@ -222,6 +223,7 @@
                                     </a></li>
                                 </li>
 
+                                <li class="header">Menu</li>
                                 <li class="treeview">
                                 <li><a href="<?= base_url('Pendaftaran') ?>">
                                         <i class="glyphicon glyphicon-edit"></i>

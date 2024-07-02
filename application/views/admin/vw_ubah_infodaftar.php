@@ -62,7 +62,7 @@
                                 </div>
 
                                 <a href="<?= base_url('Info_pendaftaran') ?>" class="btn btn-danger">Tutup</a>
-                                <button type="submit" name="tambah" class="btn btn-success pull-right">Ubah Pendaftaran</button>
+                                <button type="submit" name="tambah" class="btn btn-success pull-right">Ubah Info</button>
                             </Form>
                         </div>
                     </div>

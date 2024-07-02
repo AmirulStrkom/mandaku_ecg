@@ -15,7 +15,7 @@ class Pembayaran_bulanan_model extends CI_Model
         $this->db->from('pembayaran_bulanan p, user u');
         $this->db->where('p.id = u.id');
         $this->db->where('u.role', 'User');
-        // $this->db->where('p.gross_amount IS NOT NULL');
+        $this->db->where('p.gross_amount IS NOT NULL');
         if ($id) {
             $this->db->where('p.id', $id);
         }

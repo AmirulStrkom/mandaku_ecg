@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Halaman pembayaran Bulanan</h3>
+                            <h3 class="box-title">Halaman Pembayaran Bulanan dan Ujian</h3>
                         </div>
                         <div class="box-body">
 
