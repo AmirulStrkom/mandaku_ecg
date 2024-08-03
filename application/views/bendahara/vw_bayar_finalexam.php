@@ -41,7 +41,7 @@
                                                     <td><?= date('d F Y', strtotime($fin['transaction_time'])); ?></td>
                                                     <td>
                                                         <?php
-                                                        if ($fin['status_code'] == "Berhasil") {
+                                                        if ($fin['status_code'] == "Berhasil" || $fin['status_code'] == 200) {
                                                         ?>
                                                             <span class="badge bg-success">Success</span>
                                                         <?php

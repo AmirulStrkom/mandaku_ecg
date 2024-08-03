@@ -1,4 +1,4 @@
-<section class="bg-img pt-150 pb-20" data-overlay="7" style="background-image: url(assets/images/front-end-img/background/bg-5.png);">
+<section class="bg-img pt-150 pb-20" data-overlay="2" style="background-image: url(assets/images/front-end-img/background/bg12.png);">
     <div class="container">
         <div class="row">
             <div class="col-12">

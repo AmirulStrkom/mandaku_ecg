@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="<?= base_url('assets/') ?>images/man2kuansing.png">
 
-    <title>EduAdmin - Dashboard</title>
+    <title>English Camp Mandaku</title>
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>front-end/css/vendors_css.css">
@@ -39,7 +39,7 @@
             </div>
             <ul class="menu text-bold" style="font-family: segoe ui black;">
                 <li>
-                    <a href="Welcome"><span>Home</a>
+                    <a href="Welcome"><span>Halaman Utama</a>
                 </li>
                 <li>
                     <a href="Ldpprofile"><span>Profil</a>
@@ -56,14 +56,16 @@
                 <li>
                     <a href="Lokasi"><span>Lokasi</a>
                 </li>
-                <!-- <li>
-                    <a href="<?= base_url('Auth') ?>">Log In</a>
-                </li> -->
-                <li class="d-md-block d-none">
+                <li>
                     <a href="<?= base_url('Auth') ?>" class="px-10 pt-15 pb-10">
-                        <div class="btn btn-primary py-5">Log In</div>
+                        <div class="btn btn-primary py-5">Masuk</div>
                     </a>
                 </li>
+                <!-- <li class="d-md-block d-none">
+                    <a href="<?= base_url('Auth') ?>" class="px-10 pt-15 pb-10">
+                        <div class="btn btn-primary py-5">Masuk</div>
+                    </a>
+                </li> -->
             </ul>
             <hr style="border-color: white;">
         </nav>

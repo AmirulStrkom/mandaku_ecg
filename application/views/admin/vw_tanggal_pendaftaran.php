@@ -5,12 +5,11 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Informasi Periode Pelaksanaan</h3>
+                            <h3 class="box-title">Informasi Buka dan Tutup Pendaftaran</h3>
                         </div>
                         <div class="box-body">
-
                             <div class="float-right">
-                                <a href="<?= base_url() ?>Info_pendaftaran/tambah" class="waves-effect waves-light btn mb-5 bg-gradient-primary">Tambah Info</a>
+                                <a href="<?= base_url() ?>Tanggal_daftar/tambah" class="waves-effect waves-light btn mb-5 bg-gradient-primary">Tambah Tanggal</a>
                             </div><br>
 
                             <?= $this->session->flashdata('message'); ?>
@@ -20,28 +19,24 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <!-- <th>Tanggal Buka</th>
-                                            <th>Tanggal Tutup</th> -->
-                                            <th>Periode Satu</th>
-                                            <th>Periode Dua</th>
-                                            <th>Deskripsi Web</th>
+                                            <th>Tanggal Buka</th>
+                                            <th>Tanggal Tutup</th>
+                                            <th>Judul</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         <?php $i = 1; ?>
-                                        <?php foreach ($pendaftaran as $us) : ?>
+                                        <?php foreach ($tanggal as $us) : ?>
                                             <tr>
                                                 <td><?= $i; ?>.</td>
-                                                <!-- <td><?= date('d F Y', strtotime($us['tgl_buka'])); ?></td>
-                                                <td><?= date('d F Y', strtotime($us['tgl_tutup'])); ?></td> -->
-                                                <td><?= $us['periode_satu']; ?></td>
-                                                <td><?= $us['periode_dua']; ?></td>
-                                                <td><?= $us['deskripsi_web']; ?></td>
+                                                <td><?= date('d F Y', strtotime($us['tgl_buka'])); ?></td>
+                                                <td><?= date('d F Y', strtotime($us['tgl_tutup'])); ?></td>
+                                                <td><?= $us['judul']; ?></td>
                                                 <td>
-                                                    <a href="<?= base_url('Info_pendaftaran/edit/') . $us['id_info']; ?>" class="badge badge-warning">Edit</a>
-                                                    <a href="<?= base_url('Info_pendaftaran/hapus/') . $us['id_info']; ?>" class="badge badge-danger">Hapus</a>
+                                                    <a href="<?= base_url('Tanggal_daftar/edit/') . $us['id_tanggal']; ?>" class="badge badge-warning">Edit</a>
+                                                    <a href="<?= base_url('Tanggal_daftar/hapus/') . $us['id_tanggal']; ?>" class="badge badge-danger">Hapus</a>
                                                 </td>
                                             </tr>
                                             <?php $i++; ?>

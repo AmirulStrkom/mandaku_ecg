@@ -24,24 +24,22 @@ class Info_pendaftaran extends CI_Controller
     public function tambah()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $this->form_validation->set_rules('tgl_buka', 'Tanggal Buka', 'required', ['required' => 'Tanggal Buka Wajib di Isi']);
-        $this->form_validation->set_rules('tgl_tutup', 'Tanggal Tutup', 'required', ['required' => 'Tanggal Tutup Wajib di Isi']);
+        // $this->form_validation->set_rules('tgl_buka', 'Tanggal Buka', 'required', ['required' => 'Tanggal Buka Wajib di Isi']);
+        // $this->form_validation->set_rules('tgl_tutup', 'Tanggal Tutup', 'required', ['required' => 'Tanggal Tutup Wajib di Isi']);
         $this->form_validation->set_rules('periode_satu', 'Periode Satu', 'required', ['required' => 'Periode Pertama Wajib di Isi']);
         $this->form_validation->set_rules('periode_dua', 'Periode Dua', 'required', ['required' => 'Periode Kedua Wajib di Isi']);
         $this->form_validation->set_rules('deskripsi_web', 'Deskripsi Website', 'required', ['required' => 'Deskripsi Website Wajib di Isi']);
-
         if ($this->form_validation->run() == false) {
             $this->load->view("layout/header", $data);
             $this->load->view("admin/vw_tambah_infodaftar", $data);
             $this->load->view("layout/footer");
         } else {
             $data = [
-                'tgl_buka' => $this->input->post('tgl_buka'),
-                'tgl_tutup' => $this->input->post('tgl_tutup'),
+                // 'tgl_buka' => $this->input->post('tgl_buka'),
+                // 'tgl_tutup' => $this->input->post('tgl_tutup'),
                 'periode_satu' => $this->input->post('periode_satu'),
                 'periode_dua' => $this->input->post('periode_dua'),
                 'deskripsi_web' => $this->input->post('deskripsi_web'),
-
             ];
             $this->Info_pendaftaran_model->insert($data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Info Pendaftaran Berhasil Ditambah!</div>');
@@ -65,8 +63,8 @@ class Info_pendaftaran extends CI_Controller
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['pendaftaran'] = $this->Info_pendaftaran_model->getById($id);
-        $this->form_validation->set_rules('tgl_buka', 'Tanggal Buka', 'required', ['required' => 'Tanggal Buka Wajib di Isi']);
-        $this->form_validation->set_rules('tgl_tutup', 'Tanggal Tutup', 'required', ['required' => 'Tanggal Tutup Wajib di Isi']);
+        // $this->form_validation->set_rules('tgl_buka', 'Tanggal Buka', 'required', ['required' => 'Tanggal Buka Wajib di Isi']);
+        // $this->form_validation->set_rules('tgl_tutup', 'Tanggal Tutup', 'required', ['required' => 'Tanggal Tutup Wajib di Isi']);
         $this->form_validation->set_rules('periode_satu', 'Periode Satu', 'required', ['required' => 'Periode Pertama Wajib di Isi']);
         $this->form_validation->set_rules('periode_dua', 'Periode Dua', 'required', ['required' => 'Periode Kedua Wajib di Isi']);
         $this->form_validation->set_rules('deskripsi_web', 'Deskripsi Website', 'required', ['required' => 'Deskripsi Website Wajib di Isi']);
@@ -76,8 +74,8 @@ class Info_pendaftaran extends CI_Controller
             $this->load->view("layout/footer", $data);
         } else {
             $data = [
-                'tgl_buka' => $this->input->post('tgl_buka'),
-                'tgl_tutup' => $this->input->post('tgl_tutup'),
+                // 'tgl_buka' => $this->input->post('tgl_buka'),
+                // 'tgl_tutup' => $this->input->post('tgl_tutup'),
                 'periode_satu' => $this->input->post('periode_satu'),
                 'periode_dua' => $this->input->post('periode_dua'),
                 'deskripsi_web' => $this->input->post('deskripsi_web'),

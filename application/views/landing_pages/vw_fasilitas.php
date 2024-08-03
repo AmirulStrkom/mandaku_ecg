@@ -1,4 +1,4 @@
-<section class="bg-img pt-150 pb-20" data-overlay="7" style="background-image: url(assets/images/front-end-img/background/bg-5.png);">
+<section class="bg-img pt-150 pb-20" data-overlay="2" style="background-image: url(assets/images/front-end-img/background/bg9.png);">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -27,7 +27,7 @@
                                 <h2 class="card-title" style="font-family: Elephant;"><?= $fa['nama_fasilitas'] ?></h2>
                             </div>
                             <div class="card-footer justify-content-center">
-                                <h2 style="text-indent: 30px; font-family: 'Times New Roman', Times, serif; font-size: 16px; text-align: justify;">
+                                <h2 style="text-indent: 30px; font-family: Arial; font-size: 16px; text-align: justify;">
                                     <?= $fa['deskripsi'] ?>
                                 </h2>
                             </div>
@@ -45,7 +45,7 @@
                         <div class="card-footer justify-content-center">
                             <h2 style="font-family: Elephant; color: white;"><?= $fa['nama_fasilitas'] ?></h2>
                             <hr style="color: white;"><br>
-                            <h2 style="text-indent: 30px; font-family: 'Times New Roman', Times, serif; font-size: 16px; text-align: justify; color: white;">
+                            <h2 style="text-indent: 30px; font-family: Arial; font-size: 16px; text-align: justify; color: white;">
                                 <?= $fa['deskripsi'] ?>
                             </h2>
                         </div>

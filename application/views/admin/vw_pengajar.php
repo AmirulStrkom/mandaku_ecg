@@ -8,7 +8,6 @@
                             <h3 class="box-title">Halaman Pengajar English Camp</h3>
                         </div>
                         <div class="box-body">
-
                             <div class="float-right">
                                 <a href="<?= base_url() ?>Pengajar/tambah" class="waves-effect waves-light btn mb-5 bg-gradient-primary">Tambah Pengajar</a>
                             </div><br>

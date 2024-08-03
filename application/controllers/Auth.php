@@ -8,9 +8,9 @@ class Auth extends CI_Controller
         parent::__construct();
         $this->load->model('User_model', 'userrole');
         $this->load->model('Pendaftaran_model');
-        $this->load->model('Persyaratan_model'); //new
-        $this->load->model('Pembayaran_model'); //new
-        $this->load->model('Pembayaran_bulanan_model'); //new
+        $this->load->model('Persyaratan_model');
+        $this->load->model('Pembayaran_model');
+        $this->load->model('Pembayaran_bulanan_model');
     }
 
     function index()
@@ -55,7 +55,11 @@ class Auth extends CI_Controller
                 'required' => 'Password harus di isi'
             ]
         );
-        $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
+        $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]', [
+            'required' => 'Password wajib diisi.',
+            'trim' => 'Password tidak boleh memiliki spasi di awal atau akhir.',
+            'matches' => 'Password harus sama dengan password.'
+        ]);
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Registration';
             $this->load->view("layout/auth_header", $data);
@@ -81,7 +85,7 @@ class Auth extends CI_Controller
             $this->Persyaratan_model->insert($daftar);
             $this->Pembayaran_model->insert($daftar);
             $this->Pembayaran_bulanan_model->insert($daftar);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat! Akunmu telah berhasil terdaftar, Silahkan Login!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat! Pendaftaran Akun Berhasil, Silahkan Masuk!</div>');
             redirect('auth');
         }
     }
@@ -107,11 +111,11 @@ class Auth extends CI_Controller
                     redirect('Siswa');
                 }
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Paaword!</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata Sandi Salah!</div>');
                 redirect('auth');
             }
         } else {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Your Email have not regiter!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email Anda Belum Terdaftar!</div>');
             redirect('auth');
         }
     }
@@ -120,7 +124,7 @@ class Auth extends CI_Controller
     {
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role');
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Logout Success! </div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil Keluar! </div>');
         redirect('Auth');
     }
 }

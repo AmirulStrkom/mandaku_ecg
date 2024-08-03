@@ -3,7 +3,7 @@
         <div class="content-header">
             <div class="d-flex align-items-center">
                 <div class="me-auto">
-                    <h3 class="page-title">Halaman Tambah Periode Pelaksanaan</h3>
+                    <h3 class="page-title">Halaman Tambah Informasi Buka dan Tutup Pendaftaran</h3>
                     <div class="d-inline-block align-items-center">
                         <nav>
                             <ol class="breadcrumb">
@@ -22,12 +22,18 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h4 class="box-title">Form Tambah Periode Pelaksanaan</h4>
+                            <h4 class="box-title">Form Tambah Informasi Buka dan Tutup Pendaftaran</h4>
                         </div>
                         <div class="box-body">
                             <form action="" method="POST" enctype="multipart/form-data">
 
-                                <!-- <div class="form-group">
+                                <div class="form-group">
+                                    <label for="judul">Judul</label>
+                                    <input type="text" name="judul" value="<?= set_value('judul') ?>" class="form-control" id="judul" placeholder="Judul Jadwal">
+                                    <?= form_error('judul', '<small class="text-danger p1-3">', '</small>'); ?>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="tgl_buka">Tanggal Buka</label>
                                     <input type="date" name="tgl_buka" value="<?= set_value('tgl_buka') ?>" class="form-control" id="tgl_buka">
                                     <?= form_error('tgl_buka', '<small class="text-danger p1-3">', '</small>'); ?>
@@ -37,28 +43,10 @@
                                     <label for="tgl_tutup">Tanggal Tutup</label>
                                     <input type="date" name="tgl_tutup" value="<?= set_value('tgl_tutup') ?>" class="form-control" id="tgl_tutup">
                                     <?= form_error('tgl_tutup', '<small class="text-danger p1-3">', '</small>'); ?>
-                                </div> -->
-
-                                <div class="form-group">
-                                    <label for="periode_satu">Periode Pertama</label>
-                                    <input type="text" name="periode_satu" value="<?= set_value('periode_satu') ?>" class="form-control" id="periode_satu" placeholder="Periode Pertama">
-                                    <?= form_error('periode_satu', '<small class="text-danger p1-3">', '</small>'); ?>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="periode_dua">Periode Kedua</label>
-                                    <input type="text" name="periode_dua" value="<?= set_value('periode_dua') ?>" class="form-control" id="periode_dua" placeholder="Periode Kedua">
-                                    <?= form_error('periode_dua', '<small class="text-danger p1-3">', '</small>'); ?>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Penjelasan Websites<span class="text-danger"></span></label>
-                                    <textarea id="deskripsi_web" name="deskripsi_web" class="form-control ckeditor" rows="10" cols="80" value="<?= set_value('deskripsi_web') ?>"></textarea>
-                                    <?= form_error('deskripsi_web', '<small class="text-danger p1-3">', '</small>'); ?>
-                                </div>
-
-                                <a href="<?= base_url('Info_pendaftaran') ?>" class="btn btn-danger">Tutup</a>
-                                <button type="submit" name="tambah" class="btn btn-success pull-right">Tambah Info</button>
+                                <a href="<?= base_url('Tanggal_daftar') ?>" class="btn btn-danger">Tutup</a>
+                                <button type="submit" name="tambah" class="btn btn-success pull-right">Tambah Tanggal</button>
                             </Form>
                         </div>
                     </div>

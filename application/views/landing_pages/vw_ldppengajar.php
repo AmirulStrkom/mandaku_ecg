@@ -1,5 +1,5 @@
 <!---page Title --->
-<section class="bg-img pt-150 pb-20" data-overlay="7" style="background-image: url(assets/images/front-end-img/background/bg-5.png);">
+<section class="bg-img pt-150 pb-20" style="background-image: url(assets/images/front-end-img/background/bg11.png);">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -34,7 +34,7 @@
                                     </div>
                                 </div>
                                 <div class="fx-card-content">
-                                    <h3> <?= $us['nama_pengajar'] ?></h3> <small><?= $us['jabatan'] ?></small>
+                                    <h3 style="font-family: Elephant;"> <?= $us['nama_pengajar'] ?></h3> <small style="font-family: arial;"><?= $us['jabatan'] ?></small>
                                     <br>
                                 </div>
                             </div>

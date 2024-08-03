@@ -10,6 +10,7 @@ class Welcome extends CI_Controller
 		$this->load->model('Materi_model');
 		$this->load->model('Review_model');
 		$this->load->model('Media_model');
+		$this->load->model('Tanggal_model');
 	}
 
 	function index()
@@ -18,6 +19,7 @@ class Welcome extends CI_Controller
 		$data['materi'] = $this->Materi_model->get();
 		$data['review'] = $this->Review_model->get();
 		$data['media'] = $this->Media_model->get();
+		$data['tgl'] = $this->Tanggal_model->get();
 		$this->load->view('layout/ldp_header');
 		$this->load->view('landing_pages/vw_main', $data);
 		$this->load->view('layout/ldp_footer');

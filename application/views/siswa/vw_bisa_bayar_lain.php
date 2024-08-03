@@ -103,7 +103,7 @@
                                                 <td><?= $ba['jenis_pembayaran']; ?></td>
                                                 <td>
                                                     <?php
-                                                    if ($ba['status_code'] == "Berhasil") {
+                                                    if ($ba['status_code'] == "Berhasil" || $ba['status_code'] == 200) {
                                                     ?>
                                                         <span class="badge bg-success">Success</span>
                                                     <?php

@@ -1,6 +1,5 @@
 <div class="content-wrapper">
     <div class="container-full">
-        <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="d-flex align-items-center">
                 <div class="me-auto">
@@ -18,7 +17,6 @@
             </div>
         </div>
 
-        <!-- Main content -->
         <section class="content">
             <div class="row">
                 <div class="col-12">
@@ -129,7 +127,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="no_orangtua">Nomor Hp Orangtua</label>
-                                            <input type="text" name="no_orangtua" value="<?= set_value('no_orangtua') ?>" class="form-control" id="no_orangtua" placeholder="No Orang Tua">
+                                            <input type="number" name="no_orangtua" value="<?= set_value('no_orangtua') ?>" class="form-control" id="no_orangtua" placeholder="No Orang Tua">
                                             <?= form_error('no_orangtua', '<small class="text-danger p1-3">', '</small>'); ?>
                                         </div>
                                     </div>
@@ -147,11 +145,8 @@
                             </Form>
                         </div>
                     </div>
-                    <!-- /.box -->
                 </div>
             </div>
-            <!-- /.row -->
         </section>
-        <!-- /.content -->
     </div>
 </div>

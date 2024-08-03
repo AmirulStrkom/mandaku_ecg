@@ -6,7 +6,7 @@
             </li>
         </ul>
     </div>
-    <a style="color: blue;">ECG 2024 Developh By Amirul.</a>
+    <a style="color: blue;">English Camp Pare AEC Man 2 Kuansing 2024 </a>
 </footer>
 
 <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
@@ -40,7 +40,6 @@
 <!-- Chart -->
 <script src="<?= base_url('assets/') ?>assets/vendor_components/chart.js-master/Chart.min.js"></script>
 <script src="<?= base_url('assets/') ?>main/js/pages/widget-charts2.js"></script>
-
 
 <script type="text/javascript">
     if (document.getElementById('chartJenis')) {

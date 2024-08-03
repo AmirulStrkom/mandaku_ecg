@@ -58,53 +58,13 @@ class Pembayaran_lain extends CI_Controller
             'name' => "Pembayaran Uang Pendaftaran"
         );
 
-        // Optional
-        // $item2_details = array(
-        //     'id' => 'a2',
-        //     'price' => 20000,
-        //     'quantity' => 2,
-        //     'name' => "Orange"
-        // );
-
-        // Optional
         $item_details = array($item1_details);
 
-        // Optional
-        // $billing_address = array(
-        //     'first_name'    => "Andri",
-        //     'last_name'     => "Litani",
-        //     'address'       => "Mangga 20",
-        //     'city'          => "Jakarta",
-        //     'postal_code'   => "16602",
-        //     'phone'         => "081122334455",
-        //     'country_code'  => 'IDN'
-        // );
-
-        // Optional
-        // $shipping_address = array(
-        //     'first_name'    => "Obet",
-        //     'last_name'     => "Supriadi",
-        //     'address'       => "Manggis 90",
-        //     'city'          => "Jakarta",
-        //     'postal_code'   => "16601",
-        //     'phone'         => "08113366345",
-        //     'country_code'  => 'IDN'
-        // );
-
-        // Optional
         $customer_details = array(
             'first_name'    => $nama_siswa,
-            // 'last_name'     => "Litani",
-            // 'email'         => "andri@litani.com",
-            // 'phone'         => "081122334455",
-            // 'billing_address'  => $billing_address,
-            // 'shipping_address' => $shipping_address
         );
 
-        // Data yang akan dikirim untuk request redirect_url.
         $credit_card['secure'] = true;
-        //ser save_card true to enable oneclick or 2click
-        //$credit_card['save_card'] = true;
 
         $time = time();
         $custom_expiry = array(

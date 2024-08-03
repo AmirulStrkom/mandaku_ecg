@@ -1,5 +1,5 @@
 <!---page Title --->
-<section class="bg-img pt-150 pb-20" data-overlay="7" style="background-image: url(assets/images/front-end-img/background/bg-5.png);">
+<section class="bg-img pt-150 pb-20" style="background-image: url(assets/images/front-end-img/background/bg13.png);">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -25,16 +25,16 @@
             <div class="col-md-5 col-12 mt-30 mt-md-0">
                 <div class="box box-body p-40 bg-dark mb-0">
                     <?php foreach ($lokasi as $loc) : ?>
-                        <h2 class="box-title text-white">Info Kontak</h2>
-                        <p style="text-align: justify;"> <?= $loc['info_lokasi'] ?> </p>
+                        <h2 class="box-title text-white" style="font-family: Elephant;">Info Kontak</h2>
+                        <p style="text-align: justify; font-family: Arial;"> <?= $loc['info_lokasi'] ?> </p>
                         <div class="widget fs-18 my-20 py-20 by-1 border-light">
                             <ul class="list list-unstyled text-white-80">
-                                <li class="ps-40" style="text-align: justify;"><i class="ti-location-pin"></i><?= $loc['nama_lokasi'] ?></li>
-                                <li class="ps-40 my-20"><i class="ti-mobile"></i><?= $loc['telepon'] ?></li>
-                                <li class="ps-40"><i class="ti-email"></i><?= $loc['email'] ?></li>
+                                <li class="ps-40" style="text-align: justify; font-family: Arial;"><i class="ti-location-pin"></i><?= $loc['nama_lokasi'] ?></li>
+                                <li class="ps-40 my-20" style="font-family: Arial;"><i class="ti-mobile"></i><?= $loc['telepon'] ?></li>
+                                <li class="ps-40" style="font-family: Arial;"><i class="ti-email"></i><?= $loc['email'] ?></li>
                             </ul>
                         </div>
-                        <h4 class="mb-20">Follow Us</h4>
+                        <h4 class="mb-20" style="font-family: Arial;">Ikuti Kami</h4>
                         <ul class="list-unstyled d-flex gap-items-1">
                             <li><a href="https://www.facebook.com/man2kuansing" class="waves-effect waves-circle btn btn-social-icon btn-circle btn-facebook"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="https://www.instagram.com/man_2_kuansing/" class="waves-effect waves-circle btn btn-social-icon btn-circle btn-instagram"><i class="fa fa-instagram"></i></a></li>

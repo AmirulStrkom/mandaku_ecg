@@ -25,6 +25,12 @@
         <section class="content">
             <div class="row">
                 <div class="col-12">
+                    <div class="callout bg-temple-white">
+                        <h3>Catatan!</h3>
+                        <h5 style="font-family: Times new Roman;">- Sebelum melakukan pembayaran, pastikan jumlahnya sudah tertera.<br>
+                            - Pembayaran pendaftaran hanya bisa dilakukan sekali saja.<br>
+                            - Jika terjadi kesalahan silahkan hubungi admin via whatsapp.</h5>
+                    </div>
                     <div class="box">
 
                         <div class="box-header with-border">
@@ -96,7 +102,7 @@
                                                         <td><?= date('d F Y', strtotime($ba['transaction_time'])); ?></td>
                                                         <td>
                                                             <?php
-                                                            if ($ba['status_code'] == "Berhasil") {
+                                                            if ($ba['status_code'] == "Berhasil" || $ba['status_code'] == 200) {
                                                             ?>
                                                                 <span class="badge bg-success">Success</span>
                                                             <?php

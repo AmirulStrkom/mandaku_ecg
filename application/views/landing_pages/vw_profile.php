@@ -1,5 +1,5 @@
 <!---page Title --->
-<section class="bg-img pt-150 pb-20" data-overlay="7" style="background-image: url(assets/images/front-end-img/background/bg-5.png);">
+<section class="bg-img pt-150 pb-20" data-overlay="4" style="background-image: url(assets/images/front-end-img/background/bg10.png);">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -37,7 +37,7 @@
                         dipimpin oleh seorang pendiri, Drs. Zulkifli, M. Pd bersama rekan terbaiknya, Seprion, S. Ag., M. Pd.
                     </p> -->
                     <?php foreach ($profil as $pro) : ?>
-                        <h6 style="text-indent: 30px; font-family: 'Times New Roman', Times, serif; font-size: 16px; text-align: justify;">
+                        <h6 style="text-indent: 30px; font-family: Arial; font-size: 16px; text-align: justify;">
                             <?= $pro['sejarah'] ?>
                         </h6>
                     <?php endforeach ?>
@@ -57,14 +57,14 @@
             <?php foreach ($profil as $pro) : ?>
                 <div style="flex: 1; padding: 10px;">
                     <h3 style="font-family: Elephant; text-align: center; color: white;">Visi</h3>
-                    <h2 style="text-indent: 30px; font-family: 'Times New Roman', Times, serif; font-size: 25px; text-align: justify; color: white;">
+                    <h2 style="text-indent: 30px; font-family: Arial; font-size: 25px; text-align: justify; color: white;">
                         <?= $pro['visi'] ?>
                     </h2>
                 </div>
                 <div style="width: 2px; background-color: #fff; margin: 0 20px;"></div>
                 <div style="flex: 1; padding: 10px;">
                     <h3 style="font-family: Elephant; text-align: center; color: white;">Misi</h3>
-                    <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 25px; text-align: justify; color: white;">
+                    <h2 style="font-family: Arial; font-size: 25px; text-align: justify; color: white;">
                         <?= $pro['misi'] ?>
                     </h2>
                 </div>

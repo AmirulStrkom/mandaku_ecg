@@ -22,25 +22,28 @@
                                     <div class="form-group">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
-                                            <input type="text" name="email" id="email" class="form-control ps-15 bg-transparent" value="<?= set_value('email'); ?>" placeholder="Enter Email Address">
+                                            <input type="text" name="email" id="email" class="form-control ps-15 bg-transparent" value="<?= set_value('email'); ?>" placeholder="Masukkan Alamat Email">
                                         </div>
                                         <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text  bg-transparent"><i class="ti-lock"></i></span>
-                                            <input type="password" name="password" id="password" class="form-control ps-15 bg-transparent" value="<?= set_value('nama'); ?>" placeholder="Password">
+                                            <input type="password" name="password" id="password" class="form-control ps-15 bg-transparent" value="<?= set_value('nama'); ?>" placeholder="Kata Sandi">
                                         </div>
                                         <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 text-center">
-                                            <button type="submit" class="btn btn-danger mt-10">SIGN IN</button>
+                                            <button type="submit" class="btn btn-danger mt-10">MASUK</button>
                                         </div>
                                     </div>
                                 </form>
                                 <div class="text-center">
-                                    <p class="mt-15 mb-0">Don't have an account? <a href="<?= base_url('Auth/register'); ?>" class="text-warning ms-5">Sign Up</a></p>
+                                    <p class="mt-15 mb-0">
+                                        Kembali Kehalaman Utama ?
+                                        <a href="<?= base_url('Welcome'); ?>" class="text-primary">Kembali</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>

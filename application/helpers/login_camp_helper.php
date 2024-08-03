@@ -1,5 +1,5 @@
 <?php
-function is_logged_in() //membatasi akses ke halaman admin
+function is_logged_in()
 {
     $ci = get_instance();
     if (!$ci->session->userdata('email')) {
@@ -11,7 +11,7 @@ function is_logged_in() //membatasi akses ke halaman admin
         }
     }
 }
-function is_logged_in2() //membatasi akses ke halaman user
+function is_logged_in2()
 {
     $ci = get_instance();
     if (!$ci->session->userdata('email')) {
@@ -23,7 +23,7 @@ function is_logged_in2() //membatasi akses ke halaman user
         }
     }
 }
-function is_logged_in3() //membatasi akses ke halaman Bendahara
+function is_logged_in3()
 {
     $ci = get_instance();
     if (!$ci->session->userdata('email')) {

@@ -1,10 +1,9 @@
 <div class="content-wrapper">
     <div class="container-full">
-        <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="d-flex align-items-center">
                 <div class="me-auto">
-                    <h3 class="page-title">Halaman Edit Informasi Buka dan Tutup Pendaftaran</h3>
+                    <h3 class="page-title">Halaman Edit Informasi Periode Pelaksanaan</h3>
                     <div class="d-inline-block align-items-center">
                         <nav>
                             <ol class="breadcrumb">
@@ -18,20 +17,19 @@
             </div>
         </div>
 
-        <!-- Main content -->
         <section class="content">
             <div class="row">
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h4 class="box-title">Form Update Data Informasi Buka dan Tutup Pendaftaran</h4>
+                            <h4 class="box-title">Form Update Data Informasi Periode Pelaksanaan</h4>
                         </div>
                         <div class="box-body">
 
                             <form action="" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="id_info" value="<?= $pendaftaran['id_info']; ?>">
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="tgl_buka">Tanggal Buka</label>
                                     <input type="date" name="tgl_buka" class="form-control" id="tgl_buka" value="<?= $pendaftaran['tgl_buka']; ?>">
                                     <?= form_error('tgl_buka', '<small class="text-danger p1-3">', '</small>'); ?>
@@ -41,7 +39,7 @@
                                     <label for="tgl_tutup">Tanggal Tutup</label>
                                     <input type="date" name="tgl_tutup" class="form-control" id="tgl_tutup" value="<?= $pendaftaran['tgl_tutup']; ?>">
                                     <?= form_error('tgl_tutup', '<small class="text-danger p1-3">', '</small>'); ?>
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
                                     <label for="periode_satu">Periode Pertama</label>
@@ -66,11 +64,8 @@
                             </Form>
                         </div>
                     </div>
-                    <!-- /.box -->
                 </div>
             </div>
-            <!-- /.row -->
         </section>
-        <!-- /.content -->
     </div>
 </div>

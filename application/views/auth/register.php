@@ -21,39 +21,45 @@
 									<div class="form-group">
 										<div class="input-group mb-3">
 											<span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
-											<input type="text" name="nama" id="nama" value="<?= set_value('nama'); ?>" class="form-control ps-15 bg-transparent" placeholder="Full Name">
+											<input type="text" name="nama" id="nama" value="<?= set_value('nama'); ?>" class="form-control ps-15 bg-transparent" placeholder="Nama Lengkap">
 										</div>
 										<?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
 									</div>
 									<div class="form-group">
 										<div class="input-group mb-3">
 											<span class="input-group-text bg-transparent"><i class="ti-email"></i></span>
-											<input type="email" name="email" id="email" value="<?= set_value('email'); ?>" class="form-control ps-15 bg-transparent" placeholder="Email">
+											<input type="email" name="email" id="email" value="<?= set_value('email'); ?>" class="form-control ps-15 bg-transparent" placeholder="Alamat Email">
 										</div>
 										<?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
 									</div>
 									<div class="form-group">
 										<div class="input-group mb-3">
 											<span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
-											<input type="password" name="password1" id="password1" value="<?= set_value('password1'); ?>" class="form-control ps-15 bg-transparent" placeholder="Password">
+											<input type="password" name="password1" id="password1" value="<?= set_value('password1'); ?>" class="form-control ps-15 bg-transparent" placeholder="Kata Sandi">
 										</div>
 										<?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
 									</div>
 									<div class="form-group">
 										<div class="input-group mb-3">
 											<span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
-											<input type="password" name="password2" id="password2" value="<?= set_value('password2'); ?>" class="form-control ps-15 bg-transparent" placeholder="Retype Password">
+											<input type="password" name="password2" id="password2" value="<?= set_value('password2'); ?>" class="form-control ps-15 bg-transparent" placeholder="Ulangi Kata Sandi">
 										</div>
 										<?= form_error('password2', '<small class="text-danger pl-3">', '</small>'); ?>
 									</div>
+
+									<!-- captca -->
+									<div class="form-group">
+										<div class="g-recaptcha" data-sitekey="6LcCVxUqAAAAANxMAQhGPp53KZY5KV1UUFHSrLtW" data-callback="enableSubmitBtn"></div>
+									</div>
+
 									<div class="row">
 										<div class="col-12 text-center">
-											<button type="submit" class="btn btn-info margin-top-10">SIGN UP</button>
+											<button type="submit" id="mySubmitBtn" name="submit" disabled="disabled" class="btn btn-info margin-top-10">DAFTAR</button>
 										</div>
 									</div>
 								</form>
 								<div class="text-center">
-									<p class="mt-15 mb-0">Already have an account?<a href="<?= base_url('Auth'); ?>" class="text-danger ms-5"> Sign In</a></p>
+									<p class="mt-15 mb-0">Sudah Memiliki Akun ?<a href="<?= base_url('Auth'); ?>" class="text-primary"> Masuk</a></p>
 								</div>
 							</div>
 						</div>
@@ -62,3 +68,9 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		function enableSubmitBtn() {
+			document.getElementById("mySubmitBtn").disabled = false;
+		}
+	</script>

@@ -32,7 +32,25 @@
                                                 <td><?= $us['jenis_kelamin']; ?></td>
                                                 <td><?= $us['asal_sekolah']; ?></td>
                                                 <td><?= $us['alamat_siswa']; ?></td>
-                                                <td><?= $us['status']; ?></td>
+                                                <!-- <td><?= $us['status']; ?></td> -->
+                                                <td>
+                                                    <?php
+                                                    if ($us['status'] == "DITERIMA") {
+                                                    ?>
+                                                        <span class="badge bg-success">DITERIMA</span>
+                                                    <?php
+                                                    } elseif ($us['status'] == "DITOLAK") {
+                                                    ?>
+                                                        <span class="badge bg-danger">DITOLAK</span>
+                                                    <?php
+                                                    } else {
+                                                    ?>
+                                                        <span class="badge bg-secondary">DIPROSES</span>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </td>
+
                                                 <td>
                                                     <a href="<?= base_url('Daftarsiswa/status/') . $us['id_pendaftar']; ?>" class="badge badge-primary">Sattus</a>
                                                     <a href="<?= base_url('Daftarsiswa/detail/') . $us['id_pendaftar']; ?>" class="badge badge-info">Detail</a>

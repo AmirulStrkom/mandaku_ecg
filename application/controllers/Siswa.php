@@ -12,6 +12,7 @@ class Siswa extends CI_Controller
         $this->load->model('Persyaratan_model');
         $this->load->model('Pembayaran_model');
         $this->load->model('Info_pendaftaran_model');
+        $this->load->model('Tanggal_model');
     }
 
     function index()
@@ -24,6 +25,7 @@ class Siswa extends CI_Controller
         $data['daftar'] = $this->Pendaftaran_model->getUser($id);
         $data['syarat'] = $this->Persyaratan_model->getUser($id);
         $data['bayar'] = $this->Pembayaran_model->getUser($id);
+        $data['tgl'] = $this->Tanggal_model->get();
         $this->load->view('layout/header', $data);
         $this->load->view('siswa/vw_siswa', $data);
         $this->load->view('layout/footer');

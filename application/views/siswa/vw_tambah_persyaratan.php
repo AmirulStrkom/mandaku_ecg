@@ -26,7 +26,7 @@
                     <div class="callout bg-temple-white">
                         <h3>Catatan!</h3>
                         <h5 style="font-family: Times new Roman;">- Sebelum mengupload persyaratan, pastikan persyaratan sudah lengkap.<br>
-                            - Pengploatan persyaratan hanya bisa dilakukan sekali saja.<br>
+                            - Penguploatan persyaratan hanya bisa dilakukan sekali saja.<br>
                             - Jika terjadi kesalahan silahkan hubungi admin via whatsapp.</h5>
                     </div>
                     <?= $this->session->flashdata('message'); ?>
