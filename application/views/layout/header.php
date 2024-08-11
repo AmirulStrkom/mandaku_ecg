@@ -32,10 +32,10 @@
                     <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
                 </a>
                 <!-- Logo -->
-                <a href="#" class="logo">
+                <a href="#" class="logo justify-content-center">
                     <!-- logo-->
-                    <div class="logo-lg" style="width: 100px; height: 100px;">
-                        <span class="light-logo"><img src="<?= base_url('assets/') ?>images/pareaec.png" alt="logo"></span>
+                    <div class="logo-lg">
+                        <span class="light-logo"><img src="<?= base_url('assets/') ?>images/ecg7.png" alt="logo"></span>
                     </div>
                 </a>
             </div>

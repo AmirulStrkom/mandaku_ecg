@@ -19,7 +19,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Id Bayar</th>
+                                            <!-- <th>Id Bayar</th> -->
                                             <th>Nama</th>
                                             <th>Jumlah</th>
                                             <th>Tipe Pembayaran</th>
@@ -34,7 +34,7 @@
                                         <?php foreach ($bayar as $ba) : ?>
                                             <tr>
                                                 <td><?= $i; ?>.</td>
-                                                <td><?= $ba['order_id']; ?></td>
+                                                <!-- <td><?= $ba['order_id']; ?></td> -->
                                                 <td><?= $ba['nama']; ?></td>
                                                 <td><?= $ba['gross_amount']; ?></td>
                                                 <td><?= $ba['payment_type']; ?></td>
