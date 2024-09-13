@@ -17,40 +17,40 @@
                 <img src="<?= base_url('assets/images/pengajar/') . $pengajar['gambar']; ?>" class="card-img" alt="User Image">
             </div>
         </div>
-        <div class="col-md-8">
-            <div class="card ">
-                <div class="card-body ">
+        <div class="col-12 col-md-8"> <!-- Menggunakan col-12 untuk layar kecil -->
+            <div class="card">
+                <div class="card-body">
                     <h2 class="card-title" style="font-family: Elephant;"><?= $pengajar['nama_pengajar']; ?></h2>
-                    <h4 class="card-title" style="font-family: arial;"><?= $pengajar['jabatan']; ?></h4>
+                    <h4 class="card-title" style="font-family: Arial;"><?= $pengajar['jabatan']; ?></h4>
 
                     <div class="row" style="font-family: Arial;">
-                        <div class="col-md-3">Tanggal Lahir</div>
-                        <div class="col-md-1">:</div>
-                        <div class="col-md-6">
-                            <td><?= date('d F Y', strtotime($pengajar['tgl_lahir'])); ?></td>
+                        <div class="col-5 col-md-3">Tanggal Lahir</div>
+                        <div class="col-1">:</div>
+                        <div class="col-6 col-md-6">
+                            <?= date('d F Y', strtotime($pengajar['tgl_lahir'])); ?>
                         </div>
                     </div>
                     <div class="row" style="font-family: Arial;">
-                        <div class="col-md-3">Jenis kelamin</div>
-                        <div class="col-md-1">:</div>
-                        <div class="col-md-6"><?= $pengajar['jenis_kelamin']; ?></div>
+                        <div class="col-5 col-md-3">Jenis kelamin</div>
+                        <div class="col-1">:</div>
+                        <div class="col-5 col-md-6"><?= $pengajar['jenis_kelamin']; ?></div>
                     </div>
                     <div class="row" style="font-family: Arial;">
-                        <div class="col-md-3">Agama</div>
-                        <div class="col-md-1">:</div>
-                        <div class="col-md-6"><?= $pengajar['agama']; ?></div>
+                        <div class="col-5 col-md-3">Agama</div>
+                        <div class="col-1">:</div>
+                        <div class="col-5 col-md-6"><?= $pengajar['agama']; ?></div>
                     </div>
                     <div class="row" style="font-family: Arial;">
-                        <div class="col-md-3">Alamat</div>
-                        <div class="col-md-1">:</div>
-                        <div class="col-md-6"><?= $pengajar['alamat']; ?></div>
+                        <div class="col-5 col-md-3">Alamat</div>
+                        <div class="col-1">:</div>
+                        <div class="col-6 col-md-6"><?= $pengajar['alamat']; ?></div>
                     </div>
-
                 </div>
                 <div class="card-footer">
                     <a href="<?= base_url('Ldppengajar') ?>" class="waves-effect waves-light btn mb-5 bg-gradient-danger">Tutup</a>
                 </div>
             </div>
         </div>
+
     </div>
 </div>

@@ -1,35 +1,81 @@
-<section class="bg-img pt-150 pb-200" style="background-image: url(assets/images/front-end-img/banners/bgfix11.png); background-position: top center;">
+<!-- <section class="bg-img pt-150 pb-130" style="background-image: url(assets/images/front-end-img/banners/bgfix16.png); background-position: top center;">
     <div class="container">
         <div class="row">
-            <div class="col-12 mt-50">
+            <div class="col-12 mt-60">
+                <div class="col-md-5 col-12 mt-30 mt-md-10" style="float: right;">
+                    <img class="box-img-top " src="assets/images/man2kuansing.png" alt="Card image cap">
+                </div>
                 <div class="text-left mt-30">
                     <h1 class="box-title text-white mb-30" style="font-family: Elephant;">Selamat Datang Di</h1>
                 </div>
                 <div class="text-left mt-40">
-                    <h1 class="box-title mb-30" style="font-family: Elephant; color: #800000;">English Camp Pare AEC<br> Man 2 Kuantan Singingi</h1>
+                    <h1 class="box-title mb-30" style="font-family: Elephant; color:#8f0900">English Camp Pare AEC<br> Man 2 Kuantan Singingi</h1>
                 </div>
                 <div class="text-left">
                     <h5 class="box-title text-white" style="font-family: Arial;">Peningkatan Kemampuan Berbicara, Peningkatan Kosakata dan Tata Bahasa<br>Persiapan Ujian Bahasa Inggris, Kepercayaan Diri, Jaringan Sosial.</h5>
                 </div>
-
-                <!-- <div class="text-left mt-30 " style="font-family: segoe ui black;">
-                    <a href="Auth/register" class="btn btn-primary">DAFTAR SEKARANG</a>
-                </div> -->
-
                 <?php foreach ($tgl as $tl) : ?>
                     <?php if (isset($tl['tgl_buka'])) : ?>
                         <div class="text-left mt-30 " style="font-family: segoe ui black;">
-                            <a href="Auth/register" class="btn btn-primary">DAFTAR SEKARANG</a>
+                            <a href="Auth/register" class="btn btn-primary" style="background-color: #8f0900; border-color: #fa1505;">DAFTAR SEKARANG</a>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</section> -->
 
+<style>
+    @media only screen and (max-width: 767px) {
+        .mobile-hide {
+            display: none;
+        }
+
+        .center-mobile {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .center-mobile a {
+            display: inline-block;
+        }
+    }
+</style>
+
+<section class="bg-img pt-150 pb-130" style="background-image: url(assets/images/front-end-img/banners/bgfix16.png); background-position: top center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-60">
+                <div class="col-md-5 col-12 mt-30 mt-md-10" style="float: right;">
+                    <img class="box-img-top " src="assets/images/man2kuansing.png" alt="Card image cap">
+                </div>
+                <!-- Elemen yang akan disembunyikan di perangkat seluler -->
+                <div class="text-left mt-30 mobile-hide">
+                    <h1 class="box-title text-white mb-30" style="font-family: Elephant;">Selamat Datang Di</h1>
+                </div>
+                <div class="text-left mt-40 mobile-hide">
+                    <h1 class="box-title mb-30" style="font-family: Elephant; color:#8f0900">English Camp Pare AEC<br> Man 2 Kuantan Singingi</h1>
+                </div>
+                <div class="text-left mobile-hide">
+                    <h5 class="box-title text-white" style="font-family: Arial;">Peningkatan Kemampuan Berbicara, Peningkatan Kosakata dan Tata Bahasa<br>Persiapan Ujian Bahasa Inggris, Kepercayaan Diri, Jaringan Sosial.</h5>
+                </div>
+
+                <!-- Tombol "DAFTAR SEKARANG" yang posisinya di tengah pada perangkat seluler -->
+                <?php foreach ($tgl as $tl) : ?>
+                    <?php if (isset($tl['tgl_buka'])) : ?>
+                        <div class="text-left mt-30 center-mobile" style="font-family: segoe ui black;">
+                            <a href="Auth/register" class="btn btn-primary" style="background-color: #8f0900; border-color: #fa1505;">DAFTAR SEKARANG</a>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-50 bg-white" data-overlay="1" data-aos="fade-up" style="background-image: url(assets/images/front-end-img/background/bg-1.jpg)">
+<!-- <section class="py-50 bg-white" data-overlay="1" data-aos="fade-up" style="background-image: url(assets/images/front-end-img/background/bg-1.jpg)">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-3 col-12 mt-30 mt-md-3">
@@ -40,7 +86,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="py-30" data-aos="fade-right">
     <div class="container">
